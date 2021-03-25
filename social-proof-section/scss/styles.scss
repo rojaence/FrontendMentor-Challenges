@@ -20,7 +20,7 @@ body{
     font-family: SpartanRegular;
     font-size: 15px;
     min-height: 100vh;
-    min-width: 100vw;
+    max-width: 100vw;
     position: relative;
     display: flex;
     flex-direction: column;
@@ -101,6 +101,7 @@ body::after{
         margin: 40px auto;
         &--info{
             height: 80px;
+            max-width: 100%;
             background-color: $light-grayish-magenta;
             border-radius: 10px;
             margin: 20px auto;
@@ -126,7 +127,6 @@ body::after{
             flex-direction: column;
             margin-left: 80px;
             &--info{
-                width: auto;
                 height: 55px;
                 display: grid;
                 grid-template-columns: 3fr 4fr;
@@ -141,7 +141,7 @@ body::after{
                 transform: translateX(50px);
             }
             :nth-child(3){
-                transform: translateX(150px);
+                transform: translateX(100px);
             }
         }
     }
