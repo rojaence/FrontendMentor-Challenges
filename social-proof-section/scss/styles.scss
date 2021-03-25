@@ -4,15 +4,15 @@ $dark-grayish-magenta: hsl(303, 10%, 53%);
 $light-grayish-magenta: hsl(300, 24%, 96%);
 $white: hsl(0, 0%, 100%);
 @font-face{
-    src: url('/assets/fonts/Static/Spartan-Regular.ttf');
+    src: url('assets/fonts/Static/Spartan-Regular.ttf');
     font-family:'SpartanRegular';
 }
 @font-face{
-    src: url('/assets/fonts/static/Spartan-ExtraBold.ttf');
+    src: url('assets/fonts/static/Spartan-ExtraBold.ttf');
     font-family: 'SpartanExtraBold';
 }
 @font-face{
-    src: url('/assets/fonts/static/Spartan-Medium.ttf');
+    src: url('assets/fonts/static/Spartan-Medium.ttf');
     font-family: 'SpartanMedium';
 }
 
@@ -40,11 +40,11 @@ body::before{
     left: 0;
     height: 232px;
     width: 374px;
-    background-image: url('/assets/images/bg-pattern-top-mobile.svg');
+    background-image: url('assets/images/bg-pattern-top-mobile.svg');
     @media screen and(min-width: 1024px){
         height: 362px;
         width: 584px;
-        background-image: url('/assets/images/bg-pattern-top-desktop.svg');
+        background-image: url('assets/images/bg-pattern-top-desktop.svg');
     }
 }
 body::after{
@@ -52,11 +52,11 @@ body::after{
     right: 0;
     height: 503px;
     width: 375px;
-    background-image: url('/assets/images/bg-pattern-bottom-mobile.svg');
+    background-image: url('assets/images/bg-pattern-bottom-mobile.svg');
     @media screen and(min-width: 1024px){
         height: 673px;
         width: 1085px;
-        background-image: url('/assets/images/bg-pattern-bottom-desktop.svg');
+        background-image: url('assets/images/bg-pattern-bottom-desktop.svg');
     }
 }
 
@@ -117,7 +117,7 @@ body::after{
             display: block;
             width: 25px*5;
             height: 24px;
-            background-image: url('/assets/images/icon-star.svg');
+            background-image: url('assets/images/icon-star.svg');
             background-repeat: repeat;
         }
         @media screen and(min-width: 1024px){
