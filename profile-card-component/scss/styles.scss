@@ -1,0 +1,126 @@
+$dark-cyan: hsl(185, 75%, 39%);
+$very-dark-desaturated-blue: hsl(229, 23%, 23%);
+$dark-grayish-blue: hsl(227, 10%, 46%);
+$dark-gray: hsl(0, 0%, 59%);
+@import url('https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap');
+
+body{
+    background-color: $dark-cyan;
+    font-family: 'Kumbh Sans', sans-serif;
+    font-size: 18px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    min-height: 100vh;
+}
+
+body::before, body::after{
+    content: '';
+    position: fixed;
+    width: 978px;
+    height: 978px;
+    background-repeat: no-repeat;
+    z-index: -1;
+}
+
+body::before{
+    background-image: url('../assets/images/bg-pattern-top.svg');
+    left: -750px;
+    top: -600px;
+}
+
+body::after{
+    background-image: url('../assets/images/bg-pattern-bottom.svg');
+    right: -750px;
+    bottom: -600px;
+}
+
+@media screen and(min-width: 1024px){
+    body::before{
+        left: -200px;
+    } 
+    body::after{
+        right: -150px;
+    }
+}
+.container--main{
+    margin-top: auto;
+    width: 100%;
+    display: grid;
+    place-items: center;
+}
+
+.card{
+    max-width: 85%;
+    min-height: 360px;
+    margin: 20px auto;
+    background-color: #ffffff;
+    border-radius: 15px;
+    .bg--card{
+        max-width: 100%;
+        border-radius: 15px 15px 0 0;
+    }
+    &__photo{
+        text-align: center;
+        margin-top: -50px;
+        .picture{
+            border: 5px solid #fff;
+            border-radius: 50%;
+        }
+    }
+    &__data{
+        display: grid;
+        grid-template-columns: 3fr 2fr;
+        &--name{
+            font-size: 1.2rem;
+            text-align: right;
+        }
+        &--age{
+            display: flex;
+            align-items: center;
+            font-size: 1.2rem;
+            margin-left: 10px;
+            color: #B3B3B5;
+        }
+        &--location{
+            grid-column-start: 1;
+            grid-column-end: 3;
+            text-align: center;
+            margin: 0;
+            margin-bottom: 20px;
+            color: #B3B3B5;
+            font-size: .9rem;
+        }
+    }
+    &__statistics{
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        text-align: center;
+        border-top: 2px solid #f4f4f4;
+        padding-left: 20px;
+        padding-right: 20px;
+        &--info{
+            padding: 20px 0 10px 0;
+            cursor: pointer;
+        }
+        &--type{
+            font-size: .8rem;
+            font-weight: 400;
+            color: #B3B3B5;
+        }
+        &--number{
+            font-weight: bold;
+        }
+    }
+}
+
+.attribution{
+    margin-top: auto;
+    padding: 20px;
+    text-align: center;
+    color: $very-dark-desaturated-blue;
+    &--link{
+        text-decoration: none;
+    }
+}
