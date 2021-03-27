@@ -1,0 +1,108 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans&family=Poppins:wght@400;600&display=swap");
+body {
+  min-height: 100vh;
+  max-width: 100vw;
+  background-color: #674baf;
+  background-image: url("../assets/images/bg-mobile.svg");
+  background-repeat: no-repeat;
+  background-size: 100%;
+  font-size: 16px;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center; }
+  @media screen and (min-width: 1024px) {
+    body {
+      background-image: url("../assets/images/bg-desktop.svg");
+      background-size: 90% 100%; } }
+
+.main {
+  max-width: 100%;
+  padding: 35px 30px; }
+  @media screen and (min-width: 1024px) {
+    .main {
+      padding: 50px 100px; } }
+
+.landing {
+  text-align: center; }
+  .landing__body, .landing__footer, .landing__title {
+    margin-top: 55px; }
+  .landing__header {
+    max-width: 40%;
+    text-align: left; }
+  .landing__body, .landing__image {
+    max-width: 100%; }
+  .landing__title {
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.5rem;
+    line-height: 2rem; }
+  .landing__copy {
+    font-family: 'Open Sans', sans-serif;
+    line-height: 1.5rem; }
+  .landing__button {
+    background-color: #fff;
+    color: #674baf;
+    width: 75%;
+    height: 50px;
+    border-radius: 20px;
+    outline: none;
+    border: none; }
+  .landing__button:hover {
+    color: #fff;
+    background-color: #e882e8;
+    cursor: pointer; }
+  .landing__footer {
+    display: flex;
+    flex-direction: row;
+    justify-content: center; }
+  .landing__social {
+    width: 25px;
+    height: 25px;
+    margin: 0 5px;
+    border: 1px solid #fff;
+    border-radius: 50%;
+    display: grid;
+    place-items: center; }
+  .landing__social:hover {
+    border-color: #e882e8;
+    color: #e882e8;
+    cursor: pointer; }
+  @media screen and (min-width: 1024px) {
+    .landing {
+      max-width: 1280px;
+      text-align: left; }
+      .landing__body {
+        display: grid;
+        grid-template-areas: "img tit" "img cop" "img but";
+        grid-template-columns: 1.5fr 1fr;
+        grid-template-rows: repeat(3, 1fr);
+        column-gap: 40px; }
+      .landing__mockup {
+        grid-area: img; }
+      .landing__title, .landing__copy, .landing__footer {
+        margin: 0; }
+      .landing__title {
+        grid-area: tit;
+        align-self: end;
+        width: 80%;
+        font-size: 2rem;
+        line-height: 3rem; }
+      .landing__copy {
+        grid-area: cop;
+        align-self: center; }
+      .landing__button {
+        grid-area: but;
+        width: 40%; }
+      .landing__footer {
+        justify-content: flex-end; }
+      .landing__social {
+        width: 35px;
+        height: 35px; } }
+
+.footer {
+  text-align: center;
+  margin-top: 0; }
+  .footer__attribution--link {
+    text-decoration: none;
+    color: #e882e8; }
