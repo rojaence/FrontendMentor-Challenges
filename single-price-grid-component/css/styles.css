@@ -1,0 +1,106 @@
+@import url("https://fonts.googleapis.com/css2?family=Karla:wght@400;700&display=swap");
+body {
+  min-height: 100vh;
+  background-color: #e5eff5;
+  font-family: 'Karla', sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 16px; }
+  body .main {
+    width: 85%; }
+
+.card {
+  color: #ffffff;
+  line-height: 1.5rem;
+  margin: 70px auto;
+  border-radius: 0 0 5px 5px; }
+  .card .join, .card .subscription, .card .about {
+    padding: 25px; }
+    @media screen and (min-width: 768px) {
+      .card .join, .card .subscription, .card .about {
+        padding: 40px; } }
+
+.join {
+  background-color: #ffffff;
+  border-radius: 5px 5px 0 0;
+  font-weight: 700; }
+  .join__title {
+    color: #2ab2af;
+    margin-top: 5px; }
+  .join__guarantee {
+    color: #c0df34; }
+  .join__copy {
+    color: #98a6bd;
+    font-weight: 400;
+    margin-bottom: 10px; }
+
+.subscription {
+  background-color: #2ab2af;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between; }
+  .subscription__title {
+    margin-top: 0; }
+  .subscription__ofert {
+    display: grid;
+    grid-template-columns: 1fr 5fr;
+    column-gap: 10px;
+    margin-bottom: 30px; }
+    .subscription__ofert--price {
+      font-size: 32px;
+      font-weight: 700; }
+    .subscription__ofert--time {
+      color: #e5eff5; }
+    .subscription__ofert--benefit {
+      grid-column: 1 / 3;
+      margin-top: 10px; }
+  .subscription__button {
+    width: 100%;
+    height: 50px;
+    background-color: #c0df34;
+    border: none;
+    border-radius: 5px;
+    outline: none;
+    color: #ffffff;
+    font-weight: 700; }
+
+.about {
+  background-color: #4bbebc;
+  border-radius: 0 0 5px 5px; }
+  .about__title {
+    margin-top: 0; }
+  .about__list {
+    margin-bottom: 0;
+    color: #e5eff5;
+    list-style: none;
+    padding: 0; }
+
+.footer {
+  width: 100%;
+  text-align: center; }
+  .footer .attribution {
+    padding: 0 20px; }
+    .footer .attribution__link {
+      text-decoration: none; }
+
+@media screen and (min-width: 768px) {
+  .card {
+    max-width: 650px;
+    min-height: 400px;
+    display: grid;
+    grid-template: .75fr 1fr / 1fr 1fr; }
+  .join {
+    grid-column: 1 / 3;
+    border-radius: 10px 10px 0 0; }
+  .subscription, .about {
+    grid-row: 2 / 3; }
+  .subscription {
+    grid-column: 1 / 2;
+    border-radius: 0 0 0 10px; }
+  .about {
+    grid-column: 2 / 3;
+    border-radius: 0 0 10px 0; }
+    .about .about__list {
+      font-size: .9rem; } }
