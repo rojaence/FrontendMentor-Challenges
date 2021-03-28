@@ -1,0 +1,170 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@500;600&display=swap');
+
+$moderate-violet: hsl(263, 55%, 52%);
+$very-dark-grayish-blue: hsl(217, 19%, 35%);
+$very-dark-blackish-blue: hsl(219, 29%, 14%);
+$white: hsl(0, 0%, 100%);
+$light-gray: hsl(0, 0%, 81%);
+$light-grayish-blue: hsl(210, 46%, 95%);
+$vdark-gblue-50: hsla(217, 19%, 35%, 0.5);
+$vdark-gblue-70: hsla(217, 19%, 35%, 0.7);
+$light-gray-50: hsla(0, 0%, 81%, 0.5);
+$light-gray-70: hsla(0, 0%, 81%, 0.7);
+
+body{
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    background-color: $light-grayish-blue;
+    font-size: 13px;
+    font-family: 'Barlow Semi Condensed', sans-serif;
+}
+
+.testimonial{
+    padding: 2.5rem 1.5rem;
+    max-width: 1180px;
+    &-card{
+        // General styles cards
+        border-radius: .5rem;
+        padding: 1.7rem 2rem;
+        color: $white;
+        margin: 1.5rem 0;
+        box-shadow: 20px 20px 30px $light-gray-70;
+        // Styles common to cards elements
+        &__header{
+            display: grid;
+            grid-template-columns: auto 1fr;
+            grid-template-rows: 1fr 1fr;
+            grid-template-areas:
+            "img nam"
+            "img ver";
+            align-items: center;
+            column-gap: 1rem;
+        }
+        &__picture{
+            max-width: 2em;
+            max-height: 2em;
+            grid-area: img;
+            border: 2px solid $light-gray;
+            border-radius: 50%;
+        }
+        &__name{
+            grid-area: nam;
+            color: $light-gray;
+            font-weight: 600;
+        }
+        &__verified{
+            grid-area: ver;
+            color: $light-gray-50;
+            font-size: .7rem;
+        }
+        &__title{
+            line-height: 1.5rem;
+        }
+        &__copy{
+            font-size: .9rem;
+            font-weight: 500;
+            color: $light-gray-70;
+            line-height: 1.2rem;
+            margin-bottom: 0;
+        }
+    }
+
+    // Independent styles for each card 
+    /* The grid-area property is for responsive */ 
+    &-card:first-child{
+        background-color: $moderate-violet;
+        background-image: url('../assets/images/bg-pattern-quotation.svg');
+        background-repeat: no-repeat;
+        background-position-x: calc(100% - 1.5rem);
+        grid-area: a;
+        .testimonial-card__picture{
+            border-color: $light-gray-50;
+        }
+    }
+    &-card:nth-child(2){
+        background-color: $very-dark-grayish-blue;   
+        grid-area: b;
+    }
+    &-card:nth-child(3){
+        grid-area: c;
+    }
+
+    &-card:nth-child(3), &-card:last-child{
+        background-color: $white;
+        color: $very-dark-grayish-blue;
+        .testimonial-card{
+            &__name{
+                color: $very-dark-grayish-blue;
+            }
+            &__verified{
+                color: $vdark-gblue-50;
+            }
+            &__copy{
+                color: $vdark-gblue-70;
+            }
+        }
+    }
+    &-card:nth-child(4){
+        background-color: $very-dark-blackish-blue;   
+        grid-area: d;
+        .testimonial-card__picture{
+            border-color: $moderate-violet;
+        }
+    }
+    &-card:nth-child(5){
+        grid-area: e;
+    }
+}
+
+// Desktop
+@media screen and(min-width: 1025px){
+    .testimonial{
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-rows: repeat(2, auto);
+        grid-template-areas: 
+        "a a b e"
+        "c d d e";
+        gap: 1.8rem;
+        &-card{
+            margin: 0;
+        }
+        &-card:first-child{
+            background-position-x: 80%;
+        }
+    }
+}
+
+// Tablet
+@media (min-width: 768px) and (max-width: 1024px){
+    .testimonial{
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: repeat(3, auto);
+        grid-template-areas: 
+        "a a b"
+        "c d d"
+        "e e e";
+        gap: 1.8rem;
+        &-card{
+            margin: 0;
+        }
+    }
+}
+
+.footer{
+    width: 100%;
+    text-align: center;
+    color: $very-dark-grayish-blue;
+    font-size: 1rem;
+    .attribution{
+        padding: 0 2.5rem 1rem;
+        &__link{
+            text-decoration: none;
+            color: $moderate-violet;
+        }
+    }
+}
