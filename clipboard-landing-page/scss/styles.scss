@@ -1,0 +1,267 @@
+@import url('https://fonts.googleapis.com/css2?family=Bai+Jamjuree:wght@400;600&display=swap');
+
+$strong-cyan: hsl(171, 66%, 44%);
+$light-blue: rgb(97, 115, 255);
+$dark-grayish-blue: #4c545d;
+$grayish-blue: hsl(201, 11%, 66%);
+$bg-footer: #f5f6f8;
+$white: #ffffff;
+
+html{
+    font-size: 16px;
+}
+
+body{
+    background-color: $white;
+    min-height: 100vh;
+    font-family: 'Bai Jamjuree', sans-serif;
+    text-align: center;
+}
+
+.header{
+    padding-top: 120px;
+    background-image: url('../assets/images/bg-header-mobile.png');
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    text-align: center;
+    @media screen and(min-width: 1025px){
+        background-image: url('../assets/images/bg-header-desktop.png');
+    }
+}
+
+.main{
+    padding: 0 2rem;
+    margin: 0 auto;
+    /* max-width calculated based on the size of the 5 images of the company logo plus the margin of each one*/
+    max-width: 1125px;
+    .title{
+        &--h1, &--h2, &--h3{
+            color: $dark-grayish-blue;    
+        }
+        &--h1{
+            font-size: 2rem;    
+        }
+        &--h2{
+            font-size: 1.8rem;    
+        }
+        &--h3{
+            font-size: 1.5rem;    
+        }
+        @media screen and(min-width: 1025px){
+            &--h1{
+                font-size: 2.4rem;
+            }
+        }
+    }
+    .copy{
+        color: $grayish-blue;
+        line-height: 1.6rem;
+        font-size: 1rem; 
+    }
+    &-header{
+        font-size: 1rem;
+        &__title{
+            margin-top: 4rem;
+        }
+    }
+    &-download{
+        margin-top: 40px;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;  
+        &__button{
+            margin: 10px;
+            color: $white;
+            font-weight: 600;
+            border-radius: 25px;
+            padding: 1rem 2rem;
+            min-width: 250px;
+            outline: none;
+            border-color: transparent;
+            cursor: pointer;
+            &--ios{
+                background-color: $strong-cyan;
+            }
+            &--mac{
+                background-color: $light-blue;
+            }
+        }
+    }
+    &-header, &-footer{
+        max-width: 600px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+
+.section{
+    &-feature{
+        margin-top: 150px;
+        &__image{
+            max-width: 100%;
+        }
+        &__body{
+            margin-top: 50px;
+        }
+        &__property{
+            margin: 50px auto;
+            max-width: 400px;
+            &-title{
+                margin-bottom: 0;
+            }
+        }     
+    }
+    &-access{
+        margin-top: 150px;
+        &__image{
+            max-width: 100%;
+        }
+        &__image{
+            margin-top: 40px;
+        }
+    }
+    &-productivity{
+        margin-top: 100px;
+        &__title{
+            margin-bottom: 0;
+        }
+        &__copy{
+            margin-bottom: 80px;
+        }
+        &__container{
+            text-align: center;
+        }
+        &__property{
+            max-width: 400px;
+            margin: 50px auto;
+            &-title{
+                margin-bottom: 0;
+            }
+        }
+    }
+    &-customer{
+        margin-top: 80px;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        &__company{
+            margin: 30px;
+        }   
+    }
+
+    &-access__copy, &-feature__copy{
+        max-width: 600px;
+        margin-left: auto;
+        margin-right: auto;
+    }     
+    
+    @media screen and(min-width: 1025px){
+        &-feature{
+            &__body{
+                display: flex;
+                align-items: center;
+            }
+            &__image{
+                transform: translateX(-250px);
+            }
+            &__container{
+                align-self: center;
+                transform: translateX(-150px);
+            }
+            &__property{
+                text-align: left;
+            }
+        }
+        &-productivity{
+            &__container{
+                display: flex;
+                justify-content: space-around;
+                align-items: baseline;
+            }
+            &__property{
+                max-width: 30%;
+                margin: 0;
+            }
+        }
+        &-customer{
+            margin: 120px 0 150px 0;
+        }
+    }
+}
+
+
+.footer{
+    margin-top: 150px;
+    bottom: 0;
+    background-color: $bg-footer;
+    padding: 50px 50px 20px;
+    &-container{
+        max-width: 1280px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    &__logo{
+        width: 50px;
+        height: 50px;
+    }
+    &-menu{
+        padding: 0;
+        &__item{
+            list-style: none;
+            margin: 30px 0;
+        }
+        &__link{
+            text-decoration: none;
+            color: $dark-grayish-blue;
+        }
+        &__link:hover{
+            color: $strong-cyan;
+        }
+    }
+    &-social{
+        margin: 50px auto;
+        &__link{
+            text-decoration: none;
+            margin: 10px;
+        }
+        &__icon{
+            font-size: 24px;
+            color: $dark-grayish-blue;
+        }
+        &__icon:hover{
+            color: $strong-cyan;
+        }
+    }
+    &-attribution{
+        margin-bottom: 0;
+        font-size: .8rem;
+        color: $dark-grayish-blue;
+        &__link{
+            text-decoration: none;
+            color: #798FA8;
+        }
+    }
+    @media screen and(min-width: 1025px){
+        &-container{
+            display: grid;
+            grid-template-columns: 1fr 2fr 1fr;
+            align-items: center;
+        }
+        &__logo{
+            justify-self: center;
+        }
+        &-menu{
+            display: flex;
+            flex-wrap: wrap;
+            &__item{
+                width: 30%;
+                text-align: left;
+                margin: 10px 0;
+            }
+        }
+        &-attribution{
+            grid-column: 1 / span 3; 
+        }
+    }
+}
