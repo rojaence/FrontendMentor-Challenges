@@ -22,15 +22,13 @@ body{
 
 .main{
     margin-top: auto;
-    padding: 4rem 1.5rem;
-    @media screen and(min-width: 1024px){
-        padding-bottom: 2rem;
-    }
 }
 
 .card-container{
+    padding: 4rem 1.5rem;
     @media screen and(min-width: 1024px){
         display: flex;
+        padding-bottom: 2rem;
         .card{
             width: 220px;
             &__button{

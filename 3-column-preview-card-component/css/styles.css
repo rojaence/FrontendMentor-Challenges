@@ -12,23 +12,22 @@ body {
   flex-direction: column; }
 
 .main {
-  margin-top: auto;
+  margin-top: auto; }
+
+.card-container {
   padding: 4rem 1.5rem; }
   @media screen and (min-width: 1024px) {
-    .main {
-      padding-bottom: 2rem; } }
-
-@media screen and (min-width: 1024px) {
-  .card-container {
-    display: flex; }
-    .card-container .card {
-      width: 220px; }
-      .card-container .card__button {
-        margin-top: 4rem; }
-      .card-container .card--sedans {
-        border-radius: 10px 0 0 10px; }
-      .card-container .card--luxury {
-        border-radius: 0 10px 10px 0; } }
+    .card-container {
+      display: flex;
+      padding-bottom: 2rem; }
+      .card-container .card {
+        width: 220px; }
+        .card-container .card__button {
+          margin-top: 4rem; }
+        .card-container .card--sedans {
+          border-radius: 10px 0 0 10px; }
+        .card-container .card--luxury {
+          border-radius: 0 10px 10px 0; } }
 
 .card {
   padding: 3rem;
