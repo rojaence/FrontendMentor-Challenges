@@ -1,0 +1,89 @@
+@import url("https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700&family=Lexend+Deca&display=swap");
+@import url("../css/attribution.css");
+html {
+  font-size: 15px; }
+
+body {
+  align-items: center;
+  height: 100vh;
+  background-color: #f2f2f2;
+  font-family: 'Lexend Deca', sans-serif;
+  display: flex;
+  flex-direction: column; }
+
+.main {
+  margin-top: auto;
+  padding: 4rem 1.5rem; }
+  @media screen and (min-width: 1024px) {
+    .main {
+      padding-bottom: 2rem; } }
+
+@media screen and (min-width: 1024px) {
+  .card-container {
+    display: flex; }
+    .card-container .card {
+      width: 220px; }
+      .card-container .card__button {
+        margin-top: 4rem; }
+      .card-container .card--sedans {
+        border-radius: 10px 0 0 10px; }
+      .card-container .card--luxury {
+        border-radius: 0 10px 10px 0; } }
+
+.card {
+  padding: 3rem;
+  max-width: 480px; }
+  .card__icon {
+    width: 64px;
+    height: 40px; }
+  .card__title {
+    margin-bottom: 1.5rem;
+    color: #f2f2f2;
+    font-family: 'Big Shoulders Display', cursive;
+    font-size: 3rem; }
+  .card__copy {
+    color: rgba(255, 255, 255, 0.75);
+    line-height: 1.8rem; }
+  .card__button {
+    background-color: #f2f2f2;
+    color: inherit;
+    width: 150px;
+    margin-top: 1rem;
+    outline: none;
+    border: 3px solid transparent;
+    border-radius: 25px;
+    padding: 1rem;
+    cursor: pointer;
+    transition-property: background-color, border-color,color;
+    transition-duration: .3s; }
+    .card__button--seddans {
+      color: #e38826; }
+    .card__button--suvs {
+      color: #006970; }
+    .card__button--luxury {
+      color: #004241; }
+    .card__button:hover {
+      border-color: #f2f2f2;
+      background-color: transparent;
+      color: rgba(255, 255, 255, 0.75); }
+  .card--sedans {
+    background-color: #e38826;
+    border-radius: 10px 10px 0 0; }
+  .card--suvs {
+    background-color: #006970; }
+  .card--luxury {
+    background-color: #004241;
+    border-radius: 0 0 10px 10px; }
+
+.attribution {
+  margin-top: auto;
+  color: #006970;
+  text-align: center;
+  padding: 0 1rem 1rem; }
+  .attribution__link {
+    text-decoration: none;
+    color: #004241;
+    transition-property: color;
+    transition-duration: .3s; }
+    .attribution__link:hover {
+      color: #e38826; }

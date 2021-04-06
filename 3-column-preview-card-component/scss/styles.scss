@@ -1,0 +1,120 @@
+@import url('https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700&family=Lexend+Deca&display=swap');
+@import url('../css/attribution.css');
+
+$bright-orange: hsl(31, 77%, 52%);
+$dark-cyan: hsl(184, 100%, 22%);
+$very-dark-cyan: hsl(179, 100%, 13%);
+$transparent-white: hsla(0, 0%, 100%, 0.75);
+$very-light-gray: hsl(0, 0%, 95%);
+
+html{
+    font-size: 15px;
+}
+
+body{
+    align-items: center;
+    height: 100vh;
+    background-color: $very-light-gray;
+    font-family: 'Lexend Deca', sans-serif;
+    display: flex;
+    flex-direction: column;
+}
+
+.main{
+    margin-top: auto;
+    padding: 4rem 1.5rem;
+    @media screen and(min-width: 1024px){
+        padding-bottom: 2rem;
+    }
+}
+
+.card-container{
+    @media screen and(min-width: 1024px){
+        display: flex;
+        .card{
+            width: 220px;
+            &__button{
+                margin-top: 4rem;
+            }
+            &--sedans{
+                border-radius: 10px 0 0 10px;
+            }
+            &--luxury{
+                border-radius: 0 10px 10px 0;       
+            }
+        }
+    }
+}
+
+.card{
+    padding: 3rem;
+    max-width: 480px;
+    &__icon{
+        width: 64px;
+        height: 40px;
+    }
+    &__title{
+        margin-bottom: 1.5rem;
+        color: $very-light-gray;
+        font-family: 'Big Shoulders Display', cursive;
+        font-size: 3rem;
+    }
+    &__copy{
+        color: $transparent-white;
+        line-height: 1.8rem;
+    }
+    &__button{
+        background-color: $very-light-gray;
+        color: inherit;
+        width: 150px;
+        margin-top: 1rem;
+        outline: none;
+        border: 3px solid transparent;
+        border-radius: 25px;
+        padding: 1rem;
+        cursor: pointer;
+        transition-property: background-color, border-color,color;
+        transition-duration: .3s;
+        &--seddans{
+            color: $bright-orange;
+        }
+        &--suvs{
+            color: $dark-cyan;
+        }
+        &--luxury{
+            color: $very-dark-cyan;
+        }
+        &:hover{
+            border-color: $very-light-gray;
+            background-color: transparent;
+            color: $transparent-white;
+        }
+    }
+    &--sedans{
+        background-color: $bright-orange;
+        border-radius: 10px 10px 0 0;
+    }
+    &--suvs{
+        background-color: $dark-cyan;
+    }
+    &--luxury{
+        background-color: $very-dark-cyan;
+        border-radius: 0 0 10px 10px;
+    }
+}
+
+.attribution{
+    margin-top: auto;
+    color: $dark-cyan;
+    text-align: center;
+    padding: 0 1rem 1rem;
+    &__link{
+        text-decoration: none;
+        color: $very-dark-cyan;
+        transition-property: color;
+        transition-duration: .3s;
+        &:hover{
+            color: $bright-orange;
+        }
+    }
+}
