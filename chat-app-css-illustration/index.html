@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="assets/images/favicon-32x32.png"
+    />
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/styles.css" />
+    <script
+      src="https://kit.fontawesome.com/ef38c41be6.js"
+      crossorigin="anonymous"
+    ></script>
+    <title>Frontend Mentor | Chat app css illustration</title>
+  </head>
+  <body>
+    <main class="main">
+      <section class="mobile">
+        <div class="mobile__header">
+          <i class="fas fa-chevron-left mobile__back"></i>
+          <img
+            src="assets/images/avatar.jpg"
+            alt="avatar"
+            class="mobile__avatar"
+          />
+          <h2 class="mobile__user">Samuel Green</h2>
+          <span class="mobile__available">Available to Walk</span>
+          <i class="fas fa-ellipsis-v mobile__menu"></i>
+        </div>
+        <div class="mobile__body">
+          <p class="mobile__message mobile__message--recieved">
+            That sounds great. I’d be happy to discuss more.
+          </p>
+          <p class="mobile__message mobile__message--recieved">
+            Could you send over some pictures of your dog, please?
+          </p>
+          <div class="mobile__message mobile__message--sent mobile__message--container">
+            <img src="assets/images/dog-image-1.jpg" alt="image" class="mobile__image" />
+            <img src="assets/images/dog-image-2.jpg" alt="image" class="mobile__image" />
+            <img src="assets/images/dog-image-3.jpg" alt="image" class="mobile__image" />
+          </div>
+          <p class="mobile__message mobile__message--sent">
+            Here are a few pictures. She’s a happy girl!
+          </p>
+          <p class="mobile__message mobile__message--sent">Can you make it?</p>
+          <p class="mobile__message mobile__message--recieved">
+            She looks so happy! The time we discussed works. How long shall I
+            take her out for?
+          </p>
+          <div class="mobile__message mobile__message--recieved mobile__message--option">
+            <i class="far fa-circle mobile__radio"></i>
+            <span class="mobile__option">30 minute walk</span>
+            <span class="mobile__price">$29</span>
+          </div>
+          <div class="mobile__message mobile__message--recieved mobile__message--option">
+            <i class="far fa-circle mobile__radio"></i>
+            <span class="mobile__option"> hour walk</span>
+            <span class="mobile__price">$49</span>
+          </div>
+          <div class="mobile__input">
+            <p class="mobile__placeholder">Type a message…</p>
+            <div class="mobile__submit">
+              <i class="fas fa-angle-right"></i>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="description">
+        <h1 class="description__title">Simple booking</h1>
+        <p class="description__copy">
+          Stay in touch with our dog walkers through the chat interface. This
+          makes it easy to discuss arrangements and make bookings. Once the walk
+          has been completed you can rate your walker and book again all through
+          the chat.
+        </p>
+      </section>
+    </main> 
+    <footer class="attribution">
+      Challenge by
+      <a class="attribution__link" href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+        >Frontend Mentor</a
+      >. Coded by <a class="attribution__link" href="https://github.com/rojaence" target="_blank">Ronny Endara</a>.
+    </footer>
+  </body>
+</html>

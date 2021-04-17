@@ -1,0 +1,265 @@
+@import url("https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;700&display=swap");
+html {
+  font-size: 16px; }
+
+body {
+  min-height: 100vh;
+  background-color: #f5f3f7;
+  font-family: "Rubik", sans-serif;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  position: relative; }
+  body::before, body::after {
+    content: "";
+    width: 100%;
+    height: 570px;
+    position: absolute;
+    z-index: -1; }
+  body::before {
+    background-image: linear-gradient(45deg, #8838ff 50%, #e942ff);
+    border-radius: 0 0 50% 50%;
+    top: 0;
+    transform: translateX(-50%); }
+    @media only screen and (min-width: 1025px) {
+      body::before {
+        width: 550px;
+        height: 650px;
+        transform: translateX(-595px); } }
+  body::after {
+    width: 50%;
+    top: 50%;
+    right: 0;
+    background-image: linear-gradient(to bottom, #eee5f5 90%, #f5f3f7);
+    border-radius: 20rem 0 0 0; }
+    @media only screen and (min-width: 1025px) {
+      body::after {
+        width: 400px;
+        height: 650px;
+        top: 10%; } }
+
+@media only screen and (min-width: 1025px) {
+  .main {
+    display: flex;
+    align-items: center;
+    transform: translateX(100px); }
+    .main .description {
+      text-align: left;
+      margin-left: 125px; }
+    .main .mobile {
+      margin-bottom: 3rem; } }
+
+.mobile {
+  max-width: 240px;
+  max-height: 600px;
+  margin: 4rem auto;
+  border: 0.7rem solid white;
+  border-radius: 2rem;
+  overflow: hidden;
+  background-color: #f5f3f7;
+  box-shadow: 10px 10px 20px #c6cacd; }
+  .mobile__header {
+    display: grid;
+    grid-template-columns: repeat(2, auto) 1fr auto;
+    grid-template-rows: repeat(2, auto);
+    grid-template-areas: "back avat user men" "back avat avai men";
+    align-items: center;
+    column-gap: 0.5rem;
+    row-gap: 0.2rem;
+    background-image: linear-gradient(to right, #8838ff, #e942ff);
+    border-radius: 10px;
+    padding: 2rem 1rem 0.8rem;
+    color: #f5f3f7;
+    position: relative; }
+    .mobile__header::before {
+      content: "";
+      position: absolute;
+      width: 140px;
+      height: 30px;
+      background-color: white;
+      border-radius: 20px;
+      top: -10px;
+      left: calc(50% - 70px); }
+  .mobile__back {
+    grid-area: back;
+    font-size: 0.8rem; }
+  .mobile__avatar {
+    max-width: 1.5rem;
+    grid-area: avat;
+    border-radius: 50%;
+    border: 1px solid #f5f3f7; }
+  .mobile__user {
+    grid-area: user;
+    font-size: 0.8rem;
+    font-weight: 500;
+    margin: 0; }
+  .mobile__menu {
+    grid-area: men;
+    font-size: 0.7rem; }
+  .mobile__available {
+    grid-area: avai;
+    font-size: 0.5rem;
+    color: #d89eff; }
+  .mobile__body {
+    padding: 0.5rem 0.5rem 0.8rem;
+    display: flex;
+    flex-direction: column; }
+  .mobile__message {
+    max-width: 50%;
+    font-size: 0.5rem;
+    padding: 0.5rem;
+    border-radius: 0.75rem;
+    line-height: 0.8rem;
+    margin-bottom: 0; }
+    .mobile__message--recieved {
+      color: #9241c8;
+      background-color: #eee5f5;
+      border-bottom-left-radius: 0.25rem; }
+    .mobile__message--sent {
+      margin-left: auto;
+      background-color: white;
+      color: #6e5d7e;
+      border-bottom-right-radius: 0.25rem; }
+    .mobile__message--container {
+      min-width: 65%;
+      padding-right: 0;
+      padding-bottom: 0;
+      display: flex;
+      justify-content: space-between;
+      background-color: transparent;
+      margin-top: 1rem; }
+    .mobile__message--option {
+      background-image: linear-gradient(to right, #e942ff, #8838ff 75%);
+      color: #d89eff;
+      font-weight: 500;
+      min-width: 65%;
+      padding: 0.8rem 0.8rem 0.8rem 0.5rem;
+      margin-top: 0.5rem;
+      display: flex; }
+    .mobile__message:nth-child(6) {
+      margin-top: 1rem; }
+  .mobile__image {
+    max-width: 2.6rem;
+    border-radius: 0.6rem; }
+  .mobile__radio {
+    font-size: 0.8rem;
+    width: 15%;
+    color: #e570ff; }
+  .mobile__option {
+    width: 60%;
+    font-weight: 500; }
+  .mobile__price {
+    color: white;
+    font-size: 1rem;
+    width: 25%; }
+  .mobile__input {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 1rem;
+    background-color: white;
+    padding: 0.4rem;
+    border-radius: 2rem; }
+  .mobile__placeholder {
+    margin: 0 0 0 0.6rem;
+    font-size: 0.5rem;
+    color: #c6cacd; }
+  .mobile__submit {
+    background-color: #3e2753;
+    color: white;
+    height: 1.5rem;
+    width: 1.5rem;
+    display: grid;
+    place-items: center;
+    border-radius: 50%; }
+
+.description {
+  text-align: center;
+  max-width: 550px;
+  margin: 0 auto;
+  margin: 2rem; }
+  .description__title {
+    font-size: 2.5rem;
+    color: #3e2753; }
+  .description__copy {
+    font-size: 1.2rem;
+    line-height: 1.7rem;
+    color: #a39daa; }
+
+.attribution {
+  padding: 1rem;
+  text-align: center;
+  color: #a39daa; }
+  .attribution__link {
+    text-decoration: none;
+    color: #8838ff;
+    transition-property: color;
+    transition-duration: .3s; }
+    .attribution__link:hover {
+      color: #e942ff; }
+
+.mobile__message {
+  animation: grow 1s; }
+  .mobile__message--recieved {
+    transform-origin: left; }
+  .mobile__message--sent {
+    transform-origin: right; }
+
+.mobile__header {
+  animation: slidedown 2s; }
+
+.mobile__body {
+  animation: slideup 2s; }
+
+.description__title,
+.description__copy,
+.attribution__link,
+.attribution {
+  animation: fade 1s; }
+
+.mobile__message:nth-child(1) {
+  animation-delay: 0s; }
+
+.mobile__message:nth-child(2) {
+  animation-delay: 0.1s; }
+
+.mobile__message:nth-child(3) {
+  animation-delay: 0.2s; }
+
+.mobile__message:nth-child(4) {
+  animation-delay: 0.3s; }
+
+.mobile__message:nth-child(5) {
+  animation-delay: 0.4s; }
+
+.mobile__message:nth-child(6) {
+  animation-delay: 0.5s; }
+
+.mobile__message:nth-child(7) {
+  animation-delay: 0.6s; }
+
+.mobile__message:nth-child(8) {
+  animation-delay: 0.7s; }
+
+@keyframes grow {
+  0% {
+    transform: scale(0); }
+  100% {
+    transform: scale(1); } }
+
+@keyframes slideup {
+  0% {
+    transform: translateY(100%); }
+  100% {
+    transform: translateY(0%); } }
+
+@keyframes slidedown {
+  0% {
+    transform: translateY(-100%); }
+  100% {
+    transform: translateY(0%); } }
+
+@keyframes fade {
+  0% {
+    color: #f5f3f7; } }

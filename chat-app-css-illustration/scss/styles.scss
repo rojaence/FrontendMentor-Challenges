@@ -1,0 +1,335 @@
+@import url("https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;700&display=swap");
+
+$pale-violet: hsl(276, 100%, 81%);
+$moderate-violet: hsl(276, 55%, 52%);
+$desat-dark-violet: hsl(271, 15%, 43%);
+$grayish-blue: hsl(206, 6%, 79%);
+$very-dark-desat-violet: hsl(271, 36%, 24%);
+$dark-grayish-violet: hsl(270, 7%, 64%);
+
+$light-magenta: hsl(293, 100%, 63%);
+$light-violet: hsl(264, 100%, 61%);
+
+$white: hsl(0, 0%, 100%);
+$light-grayish-violet: hsl(270, 20%, 96%);
+$very-dark-desat-violet: hsl(271, 36%, 24%);
+$very-light-magenta: hsl(289, 100%, 72%);
+$background-recieved: hsl(272, 46%, 93%);
+
+$delay: 0s;
+
+html {
+  font-size: 16px;
+}
+
+body {
+  min-height: 100vh;
+  background-color: $light-grayish-violet;
+  font-family: "Rubik", sans-serif;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  position: relative;
+  &::before,
+  &::after {
+    content: "";
+    width: 100%;
+    height: 570px;
+    position: absolute;
+    z-index: -1;
+  }
+  &::before {
+    background-image: linear-gradient(45deg, $light-violet 50%, $light-magenta);
+    border-radius: 0 0 50% 50%;
+    top: 0;
+    transform: translateX(-50%);
+    @media only screen and(min-width: 1025px) {
+      width: 550px;
+      height: 650px;
+      transform: translateX(-595px);
+    }
+  }
+  &::after {
+    width: 50%;
+    top: 50%;
+    right: 0;
+    background-image: linear-gradient(
+      to bottom,
+      $background-recieved 90%,
+      $light-grayish-violet
+    );
+    border-radius: 20rem 0 0 0;
+    @media only screen and(min-width: 1025px) {
+      width: 400px;
+      height: 650px;
+      top: 10%;
+    }
+  }
+}
+
+.main {
+  @media only screen and(min-width: 1025px) {
+    display: flex;
+    align-items: center;
+    transform: translateX(100px);
+    .description {
+      text-align: left;
+      margin-left: 125px;
+    }
+    .mobile {
+      margin-bottom: 3rem;
+    }
+  }
+}
+
+.mobile {
+  max-width: 240px;
+  max-height: 600px;
+  margin: 4rem auto;
+  border: 0.7rem solid $white;
+  border-radius: 2rem;
+  overflow: hidden;
+  background-color: $light-grayish-violet;
+  box-shadow: 10px 10px 20px $grayish-blue;
+  &__header {
+    display: grid;
+    grid-template-columns: repeat(2, auto) 1fr auto;
+    grid-template-rows: repeat(2, auto);
+    grid-template-areas:
+      "back avat user men"
+      "back avat avai men";
+    align-items: center;
+    column-gap: 0.5rem;
+    row-gap: 0.2rem;
+    background-image: linear-gradient(to right, $light-violet, $light-magenta);
+    border-radius: 10px;
+    padding: 2rem 1rem 0.8rem;
+    color: $light-grayish-violet;
+    position: relative;
+    &::before {
+      content: "";
+      position: absolute;
+      width: 140px;
+      height: 30px;
+      background-color: $white;
+      border-radius: 20px;
+      top: -10px;
+      left: calc(50% - 70px);
+    }
+  }
+  &__back {
+    grid-area: back;
+    font-size: 0.8rem;
+  }
+  &__avatar {
+    max-width: 1.5rem;
+    grid-area: avat;
+    border-radius: 50%;
+    border: 1px solid $light-grayish-violet;
+  }
+  &__user {
+    grid-area: user;
+    font-size: 0.8rem;
+    font-weight: 500;
+    margin: 0;
+  }
+  &__menu {
+    grid-area: men;
+    font-size: 0.7rem;
+  }
+  &__available {
+    grid-area: avai;
+    font-size: 0.5rem;
+    color: $pale-violet;
+  }
+  &__body {
+    padding: 0.5rem 0.5rem 0.8rem;
+    display: flex;
+    flex-direction: column;
+  }
+  &__message {
+    max-width: 50%;
+    font-size: 0.5rem;
+    padding: 0.5rem;
+    border-radius: 0.75rem;
+    line-height: 0.8rem;
+    margin-bottom: 0;
+    &--recieved {
+      color: $moderate-violet;
+      background-color: $background-recieved;
+      border-bottom-left-radius: 0.25rem;
+    }
+    &--sent {
+      margin-left: auto;
+      background-color: $white;
+      color: $desat-dark-violet;
+      border-bottom-right-radius: 0.25rem;
+    }
+    &--container {
+      min-width: 65%;
+      padding-right: 0;
+      padding-bottom: 0;
+      display: flex;
+      justify-content: space-between;
+      background-color: transparent;
+      margin-top: 1rem;
+    }
+    &--option {
+      background-image: linear-gradient(
+        to right,
+        $light-magenta,
+        $light-violet 75%
+      );
+      color: $pale-violet;
+      font-weight: 500;
+      min-width: 65%;
+      padding: 0.8rem 0.8rem 0.8rem 0.5rem;
+      margin-top: 0.5rem;
+      display: flex;
+    }
+    &:nth-child(6) {
+      margin-top: 1rem;
+    }
+  }
+  &__image {
+    max-width: 2.6rem;
+    border-radius: 0.6rem;
+  }
+  &__radio {
+    font-size: 0.8rem;
+    width: 15%;
+    color: $very-light-magenta;
+  }
+  &__option {
+    width: 60%;
+    font-weight: 500;
+  }
+  &__price {
+    color: $white;
+    font-size: 1rem;
+    width: 25%;
+  }
+  &__input {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 1rem;
+    background-color: $white;
+    padding: 0.4rem;
+    border-radius: 2rem;
+  }
+  &__placeholder {
+    margin: 0 0 0 0.6rem;
+    font-size: 0.5rem;
+    color: $grayish-blue;
+  }
+  &__submit {
+    background-color: $very-dark-desat-violet;
+    color: $white;
+    height: 1.5rem;
+    width: 1.5rem;
+    display: grid;
+    place-items: center;
+    border-radius: 50%;
+  }
+}
+
+.description {
+  text-align: center;
+  max-width: 550px;
+  margin: 0 auto;
+  margin: 2rem;
+  &__title {
+    font-size: 2.5rem;
+    color: $very-dark-desat-violet;
+  }
+  &__copy {
+    font-size: 1.2rem;
+    line-height: 1.7rem;
+    color: $dark-grayish-violet;
+  }
+}
+.attribution {
+  padding: 1rem;
+  text-align: center;
+  color: $dark-grayish-violet;
+  &__link {
+    text-decoration: none;
+    color: $light-violet;
+    transition-property: color;
+    transition-duration: .3s;
+    &:hover{
+      color: $light-magenta;
+    }
+  }
+}
+
+
+
+// Animations
+
+.mobile__message {
+  animation: grow 1s;
+  &--recieved {
+    transform-origin: left;
+  }
+  &--sent {
+    transform-origin: right;
+  }
+}
+
+.mobile__header {
+  animation: slidedown 2s;
+}
+
+.mobile__body {
+  animation: slideup 2s;
+}
+
+.description__title,
+.description__copy,
+.attribution__link,
+.attribution{
+  animation: fade 1s;
+}
+
+@for $i from 1 through 8 {
+  .mobile__message:nth-child(#{$i}) {
+    animation-delay: $delay;
+  }
+  $delay: $delay + 0.1s;
+}
+
+@keyframes grow {
+  0% {
+    transform: scale(0);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+@keyframes slideup {
+  0% {
+    transform: translateY(100%);
+  }
+  100% {
+    transform: translateY(0%);
+  }
+}
+
+@keyframes slidedown {
+  0% {
+    transform: translateY(-100%);
+  }
+  100% {
+    transform: translateY(0%);
+  }
+}
+
+@keyframes fade {
+  0% {
+    color: $light-grayish-violet;
+  }
+}
