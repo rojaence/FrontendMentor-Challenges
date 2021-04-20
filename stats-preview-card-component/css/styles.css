@@ -1,0 +1,101 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Lexend+Deca&display=swap");
+html {
+  font-size: 15px; }
+
+body {
+  min-height: 100vh;
+  background-color: #090b1a;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center; }
+
+.main {
+  margin-top: auto; }
+
+.card {
+  max-width: 480px;
+  background-color: #1b1938;
+  margin: 5.5rem 1.5rem;
+  border-radius: 0.5rem;
+  overflow: hidden;
+  font-family: "Inter", sans-serif; }
+  .card__header {
+    position: relative;
+    background-color: red;
+    display: grid;
+    place-items: center; }
+    .card__header:before {
+      content: "";
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      background-color: rgba(101, 10, 158, 0.4); }
+  .card__image {
+    max-width: 100%; }
+  .card__body {
+    padding: 1rem 2rem; }
+  .card__title {
+    font-size: 1.8rem; }
+    .card__title--emphasis {
+      color: #aa5cdb; }
+  .card__copy {
+    color: rgba(255, 255, 255, 0.75);
+    line-height: 1.6rem; }
+  .card__statistic {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 2.5rem; }
+  .card__number {
+    font-size: 1.4rem;
+    font-weight: 700;
+    margin-bottom: 0.5rem; }
+  .card__label {
+    font-family: "Lexend Deca", sans-serif;
+    font-size: 0.8rem;
+    color: rgba(255, 255, 255, 0.6); }
+  .card__footer {
+    margin-top: 1rem; }
+  @media screen and (min-width: 1024px) {
+    .card {
+      display: grid;
+      max-width: 900px;
+      grid-template-columns: repeat(2, 1fr);
+      grid-template-rows: repeat(2, auto);
+      grid-template-areas: "body head" "foot head";
+      align-items: center;
+      text-align: left;
+      padding-left: 2rem; }
+      .card__body {
+        grid-area: body; }
+      .card__title {
+        padding-right: 5rem;
+        font-size: 2rem; }
+      .card__copy {
+        padding-right: 7.5rem;
+        font-size: .8rem; }
+      .card__header {
+        grid-area: head; }
+      .card__image {
+        content: url("../assets/images/image-header-desktop.jpg"); }
+      .card__footer {
+        display: flex;
+        grid-area: foot;
+        padding-left: 2rem;
+        margin-top: 0; }
+      .card__statistic:nth-child(1), .card__statistic:nth-child(2) {
+        margin-right: 4rem; } }
+
+.attribution {
+  margin: 1rem 3rem;
+  margin-top: auto;
+  color: rgba(255, 255, 255, 0.6);
+  font-family: "Inter", sans-serif; }
+  .attribution__link {
+    text-decoration: none;
+    color: rgba(255, 255, 255, 0.75);
+    transition-property: color;
+    transition-duration: 0.3s; }
+    .attribution__link:hover {
+      color: #aa5cdb; }
