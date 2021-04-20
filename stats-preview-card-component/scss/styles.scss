@@ -3,7 +3,7 @@
 $very-dark-blue: hsl(233, 47%, 7%);
 $dark-desat-blue: hsl(244, 38%, 16%);
 $soft-violet: hsl(277, 64%, 61%);
-$trans-violet: hsla(277, 88%, 33%, 0.4);
+$trans-violet: hsla(277, 88%, 33%, 0.5);
 $white: hsl(0, 0%, 100%);
 $slight-trans-white-75: hsla(0, 0%, 100%, 0.75);
 $slight-trans-white-60: hsla(0, 0%, 100%, 0.6);
@@ -82,7 +82,7 @@ body {
   }
   @media screen and(min-width: 1024px) {
     display: grid;
-    max-width: 900px;
+    max-width: 1023px;
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: repeat(2, auto);
     grid-template-areas:
@@ -90,17 +90,17 @@ body {
       "foot head";
     align-items: center;
     text-align: left;
-    padding-left: 2rem;
+    padding-left: 2.5rem;
     &__body {
       grid-area: body;
     }
     &__title {
-        padding-right: 5rem;
-        font-size: 2rem;
+        padding-right: 4rem;
+        font-size: 2.4rem;
     }
     &__copy {
-        padding-right: 7.5rem;
-        font-size: .8rem;
+        padding-right: 7rem;
+        font-size: 1rem;
     }
     &__header {
       grid-area: head;
