@@ -1,0 +1,178 @@
+@import url("https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap");
+
+$soft-red: hsl(14, 88%, 65%);
+$dark-blue: hsl(238, 29%, 16%);
+$soft-violet: hsl(273, 75%, 66%);
+$soft-blue: hsl(240, 73%, 65%);
+$very-dg-blue: hsl(237, 12%, 33%);
+$dg-blue: hsl(240, 6%, 50%);
+$lg-blue: hsl(240, 5%, 91%);
+$white: hsl(0, 0%, 100%);
+
+html {
+  font-size: 14px;
+}
+
+body {
+  background-image: linear-gradient(to bottom, $soft-violet, $soft-blue);
+  font-family: "Kumbh Sans", sans-serif;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+.main {
+  margin: 4rem 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 10rem;
+  padding: 0 2rem 2rem;
+  background-color: #fff;
+  border-radius: 1.5rem;
+  font-size: 12px;
+  box-shadow: 0 1rem 4rem $very-dg-blue;
+  &__header {
+    position: relative;
+    height: 8rem;
+    &::before {
+      content: url("../assets/images/bg-pattern-mobile.svg");
+      position: absolute;
+    }
+  }
+  &__title {
+    text-align: center;
+    font-size: 2.5rem;
+    color: $dark-blue;
+  }
+  &__image {
+    &--woman {
+      max-width: 240px;
+      transform: translateY(-8rem);
+    }
+    &--box {
+      position: absolute;
+      transform: scale(0.5);
+      left: -3.5rem;
+      top: -6.4rem;
+      z-index: 10;
+    }
+  }
+  &__accordion {
+    width: 260px;
+    display: grid;
+    grid-template-columns: 1fr 1rem;
+    grid-template-rows: repeat(2, auto);
+    grid-template-areas:
+      "questi arrow"
+      "answer arrow";
+    align-items: baseline;
+    border-bottom: 2px solid $lg-blue;
+    margin-bottom: 1rem;
+    &:hover {
+        .card__question {
+            color: $soft-red;
+        }
+    }
+  }
+  &__question {
+    grid-area: questi;
+    color: $very-dg-blue;
+  }
+  &__answer {
+    grid-area: answer;
+    color: $dg-blue;
+    margin-top: 0;
+    display: none;
+    transform-origin: top;
+  }
+  &__arrow {
+    grid-area: arrow;
+    justify-self: center;
+    transition: transform 0.3s;
+  }
+  &__question, &__arrow {
+    cursor: pointer;
+  }
+  @media screen and (min-width: 1024px) {
+    flex-direction: row;
+    justify-content: space-around;
+    width: 750px;
+    font-size: 1rem;
+    padding: 4rem 4rem 4rem 6rem;
+    margin-top: 5rem;
+    background-image: url("../assets/images/bg-pattern-desktop.svg");
+    background-repeat: no-repeat;
+    background-position: -42.5rem -21rem;
+    &__header {
+      height: 100%;
+      transform: scale(1.9) translateX(-3.8rem);
+      &::before {
+        content: "";
+      }
+    }
+    &__title {
+      text-align: left;
+    }
+    &__image {
+      &--woman {
+        transform: translateY(0);
+        clip-path: inset(0 0 0 3.2rem);
+      }
+      &--box {
+        top: 1.6rem;
+      }
+    }
+    &__accordion {
+      margin-right: 0;
+      width: 350px;
+    }
+    &__body {
+      align-self: flex-end;
+    }
+  }
+}
+
+.attribution {
+  text-align: center;
+  padding: 0 4rem 1rem;
+  color: $lg-blue;
+  &__link {
+    text-decoration: none;
+    color: $white;
+    transition: color 0.3s;
+    &:hover {
+      color: $soft-red;
+    }
+  }
+}
+
+// Accordion active state
+.card__accordion--active {
+  .card__answer {
+    display: block;
+    animation: slide 0.3s;
+  }
+  .card__question {
+      font-weight: 700;
+  }
+  .card__arrow {
+    transform: rotate(180deg);
+  }
+}
+
+@keyframes slide {
+  0% {
+    transform: scale(1, 0);
+  }
+  100% {
+    transform: scale(1, 1);
+  }
+}
