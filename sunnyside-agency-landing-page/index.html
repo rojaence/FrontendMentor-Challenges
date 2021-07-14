@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script
+      src="https://kit.fontawesome.com/ef38c41be6.js"
+      crossorigin="anonymous"
+    ></script>
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="assets/images/favicon-32x32.png"
+    />
+    <link rel="stylesheet" href="css/normalize.css" />
+    <link rel="stylesheet" href="css/styles.css" />
+    <title>Frontend Mentor | Sunnyside agency landing page</title>
+  </head>
+  <body class="theme">
+    <header class="header">
+      <img src="assets/images/logo.svg" alt="logo" class="header__logo" />
+      <div class="menu-button" id="menu-button" data-menu="main-menu-button">
+        <div class="menu-button__icon" data-menu="main-menu-button"></div>
+      </div>
+      <nav
+        class="main-nav"
+        id="main-nav"
+        aria-label="Main menu"
+        data-menu="main-menu"
+      >
+        <ul class="main-nav__list" data-menu="main-menu">
+          <li class="main-nav__item" data-menu="main-menu">
+            <a href="#" class="main-nav__link" data-menu="main-menu">About</a>
+          </li>
+          <li class="main-nav__item" data-menu="main-menu">
+            <a href="#" class="main-nav__link" data-menu="main-menu"
+              >Services</a
+            >
+          </li>
+          <li class="main-nav__item" data-menu="main-menu">
+            <a href="#" class="main-nav__link" data-menu="main-menu"
+              >Projects</a
+            >
+          </li>
+          <li class="main-nav__item" data-menu="main-menu">
+            <a href="#" class="main-nav__link" data-menu="main-menu">Contact</a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+    <main class="main">
+      <div class="banner">
+        <h1 class="banner__title">We are creatives</h1>
+      </div>
+      <section class="proposal">
+        <article class="card-benefit card-benefit--transform-brand">
+          <picture class="card-benefit__picture">
+            <source
+              media="(min-width: 768px)"
+              srcset="assets/images/desktop/image-transform.jpg"
+            />
+            <img
+              src="assets/images/mobile/image-transform.jpg"
+              alt="Picture card"
+              class="card-benefit__image"
+            />
+          </picture>
+          <div class="card-benefit__body">
+            <h2 class="card-benefit__title">Transform your brand</h2>
+            <p class="card-benefit__copy">
+              We are a full-service creative agency specializing in helping
+              brands grow fast. Engage your clients through compelling visuals
+              that do most of the marketing for you.
+            </p>
+            <a
+              href="#"
+              class="card-benefit__link card-benefit__link--transform-brand"
+              >Learn more</a
+            >
+          </div>
+        </article>
+        <article class="card-benefit card-benefit--stand-out">
+          <picture class="card-benefit__picture">
+            <source
+              media="(min-width: 768px)"
+              srcset="assets/images/desktop/image-stand-out.jpg"
+            />
+            <img
+              src="assets/images/mobile/image-stand-out.jpg"
+              alt="Picture card"
+              class="card-benefit__image"
+            />
+          </picture>
+          <div class="card-benefit__body">
+            <h2 class="card-benefit__title">Stand out to the right audience</h2>
+            <p class="card-benefit__copy">
+              Using a collaborative formula of designers, researchers,
+              photographers, videographers, and copywriters, we’ll build and
+              extend your brand in digital places.
+            </p>
+            <a href="#" class="card-benefit__link card-benefit__link--stand-out"
+              >Learn more</a
+            >
+          </div>
+        </article>
+        <article
+          class="card-benefit card-benefit--overlap card-benefit--graphic"
+        >
+          <picture class="card-benefit__picture">
+            <source
+              media="(min-width: 768px)"
+              srcset="assets/images/desktop/image-graphic-design.jpg"
+            />
+            <img
+              src="assets/images/mobile/image-graphic-design.jpg"
+              alt="Picture card"
+              class="card-benefit__image"
+            />
+          </picture>
+          <div class="card-benefit__body">
+            <h2 class="card-benefit__title card-benefit__title--graphic-design">
+              Graphic design
+            </h2>
+            <p class="card-benefit__copy card-benefit__copy--graphic-design">
+              Great design makes you memorable. We deliver artwork that
+              underscores your brand message and captures potential clients’
+              attention.
+            </p>
+          </div>
+        </article>
+        <article
+          class="card-benefit card-benefit--overlap card-benefit--photography"
+        >
+          <picture class="card-benefit__picture">
+            <source
+              media="(min-width: 768px)"
+              srcset="assets/images/desktop/image-photography.jpg"
+            />
+            <img
+              src="assets/images/mobile/image-photography.jpg"
+              alt="Picture card"
+              class="card-benefit__image"
+            />
+          </picture>
+          <div class="card-benefit__body">
+            <h2 class="card-benefit__title card-benefit__title--photography">
+              Fhotography
+            </h2>
+            <p class="card-benefit__copy card-benefit__copy--photography">
+              Increase your credibility by getting the most stunning,
+              high-quality photos that improve your business image.
+            </p>
+          </div>
+        </article>
+      </section>
+      <section class="testimonial">
+        <h2 class="testimonial__title">Client testimonials</h2>
+        <article class="card-client">
+          <picture class="card-client__picture">
+            <img
+              src="assets/images/image-emily.jpg"
+              alt="Picture card"
+              class="card-client__image"
+            />
+          </picture>
+          <div class="card-client__body">
+            <p class="card-client__copy">
+              We put our trust in Sunnyside and they delivered, making sure our
+              needs were met and deadlines were always hit.
+            </p>
+            <h3 class="card-client__user">Emily R.</h3>
+            <h4 class="card-client__employment">Marketing director</h4>
+          </div>
+        </article>
+        <article class="card-client">
+          <picture class="card-client__picture">
+            <img
+              src="assets/images/image-thomas.jpg"
+              alt="Picture card"
+              class="card-client__image"
+            />
+          </picture>
+          <div class="card-client__body">
+            <p class="card-client__copy">
+              Sunnyside’s enthusiasm coupled with their keen interest in our
+              brand’s success made it a satisfying and enjoyable experience.
+            </p>
+            <h3 class="card-client__user">Thomas A.</h3>
+            <h4 class="card-client__employment">Chief Operating Officer</h4>
+          </div>
+        </article>
+        <article class="card-client">
+          <picture class="card-client__picture">
+            <img
+              src="assets/images/image-jennie.jpg"
+              alt="Picture card"
+              class="card-client__image"
+            />
+          </picture>
+          <div class="card-client__body">
+            <p class="card-client__copy">
+              Incredible end result! Our sales increased over 400% when we
+              worked with Sunnyside. Highly recommended!
+            </p>
+            <h3 class="card-client__user">Jennie F.</h3>
+            <h4 class="card-client__employment">Business owner</h4>
+          </div>
+        </article>
+      </section>
+      <div class="gallery">
+        <picture class="gallery__picture">
+          <source
+            media="(min-width: 768px)"
+            srcset="assets/images/desktop/image-gallery-milkbottles.jpg"
+          />
+          <img
+            src="assets/images/mobile/image-gallery-milkbottles.jpg"
+            alt="Milkbottles"
+            class="gallery__image"
+          />
+        </picture>
+        <picture class="gallery__picture">
+          <source
+            media="(min-width: 768px)"
+            srcset="assets/images/desktop/image-gallery-orange.jpg"
+          />
+          <img
+            src="assets/images/mobile/image-gallery-orange.jpg"
+            alt="Orange"
+            class="gallery__image"
+          />
+        </picture>
+        <picture class="gallery__picture">
+          <source
+            media="(min-width: 768px)"
+            srcset="assets/images/desktop/image-gallery-cone.jpg"
+          />
+          <img
+            src="assets/images/mobile/image-gallery-cone.jpg"
+            alt="Cone"
+            class="gallery__image"
+          />
+        </picture>
+        <picture class="gallery__picture">
+          <source
+            media="(min-width: 768px)"
+            srcset="assets/images/desktop/image-gallery-sugar-cubes.jpg"
+          />
+          <img
+            src="assets/images/mobile/image-gallery-sugar-cubes.jpg"
+            alt="Sugar cubes"
+            class="gallery__image"
+          />
+        </picture>
+      </div>
+    </main>
+    <footer class="footer">
+      <img
+        src="assets/images/logo-footer.svg"
+        alt="logo"
+        class="footer__logo"
+      />
+      <nav class="bottom-nav">
+        <ul class="bottom-nav__list">
+          <li class="bottom-nav__item">
+            <a href="" class="bottom-nav__link">About</a>
+          </li>
+          <li class="bottom-nav__item">
+            <a href="" class="bottom-nav__link">Services</a>
+          </li>
+          <li class="bottom-nav__item">
+            <a href="" class="bottom-nav__link">Projects</a>
+          </li>
+        </ul>
+      </nav>
+      <div class="social">
+        <ul class="social__list">
+          <li class="social__item">
+            <a href="#" class="social__link">
+              <i class="fab fa-facebook-square social__icon"></i>
+            </a>
+          </li>
+          <li class="social__item">
+            <a href="#" class="social__link">
+              <i class="fab fa-instagram social__icon"></i>
+            </a>
+          </li>
+          <li class="social__item">
+            <a href="#" class="social__link">
+              <i class="fab fa-twitter social__icon"></i>
+            </a>
+          </li>
+          <li class="social__item">
+            <a href="#" class="social__link">
+              <i class="fab fa-pinterest social__icon"></i>
+            </a>
+          </li>
+        </ul>
+      </div>
+      <div class="attribution">
+        <p class="attribution__label">
+          Challenge by
+          <a
+            href="https://www.frontendmentor.io?ref=challenge"
+            target="_blank"
+            class="attribution__link"
+            >Frontend Mentor</a
+          >.
+        </p>
+        <p class="attribution__label">
+          Coded by
+          <a
+            href="https://github.com/rojaence"
+            target="_blank"
+            class="attribution__link"
+            >Ronny Endara</a
+          >.
+        </p>
+      </div>
+    </footer>
+    <script src="js/scripts.js"></script>
+  </body>
+</html>
