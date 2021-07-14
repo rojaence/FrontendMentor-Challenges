@@ -1,5 +1,4 @@
 @import url("https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700&family=Lexend+Deca&display=swap");
-@import url("../css/attribution.css");
 html {
   font-size: 15px; }
 
@@ -22,7 +21,7 @@ body {
       padding-bottom: 2rem; }
       .card-container .card {
         width: 220px; }
-        .card-container .card__button {
+        .card-container .card__link {
           margin-top: 4rem; }
         .card-container .card--sedans {
           border-radius: 10px 0 0 10px; }
@@ -43,25 +42,27 @@ body {
   .card__copy {
     color: rgba(255, 255, 255, 0.75);
     line-height: 1.8rem; }
-  .card__button {
+  .card__link {
     background-color: #f2f2f2;
+    text-decoration: none;
+    display: block;
+    text-align: center;
     color: inherit;
-    width: 150px;
-    margin-top: 1rem;
-    outline: none;
+    width: 120px;
+    margin-top: 1.5rem;
     border: 3px solid transparent;
     border-radius: 25px;
     padding: 1rem;
     cursor: pointer;
     transition-property: background-color, border-color,color;
     transition-duration: .3s; }
-    .card__button--seddans {
+    .card__link--seddans {
       color: #e38826; }
-    .card__button--suvs {
+    .card__link--suvs {
       color: #006970; }
-    .card__button--luxury {
+    .card__link--luxury {
       color: #004241; }
-    .card__button:hover {
+    .card__link:hover {
       border-color: #f2f2f2;
       background-color: transparent;
       color: rgba(255, 255, 255, 0.75); }

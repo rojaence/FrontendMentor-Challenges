@@ -1,5 +1,4 @@
 @import url('https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700&family=Lexend+Deca&display=swap');
-@import url('../css/attribution.css');
 
 $bright-orange: hsl(31, 77%, 52%);
 $dark-cyan: hsl(184, 100%, 22%);
@@ -31,7 +30,7 @@ body{
         padding-bottom: 2rem;
         .card{
             width: 220px;
-            &__button{
+            &__link{
                 margin-top: 4rem;
             }
             &--sedans{
@@ -61,12 +60,14 @@ body{
         color: $transparent-white;
         line-height: 1.8rem;
     }
-    &__button{
+    &__link{
         background-color: $very-light-gray;
+        text-decoration: none;
+        display: block;
+        text-align: center;
         color: inherit;
-        width: 150px;
-        margin-top: 1rem;
-        outline: none;
+        width: 120px;
+        margin-top: 1.5rem;
         border: 3px solid transparent;
         border-radius: 25px;
         padding: 1rem;
