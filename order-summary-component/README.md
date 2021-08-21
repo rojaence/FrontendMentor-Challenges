@@ -26,7 +26,6 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Solution Link](https://your-solution-url.com)
 - Live Site URL: [live Site Link](https://rojaence.github.io/FrontendMentor-Challenges/order-summary-component/)
 
 ## My process
