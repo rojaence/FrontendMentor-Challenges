@@ -1,0 +1,133 @@
+@import url("https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@500;700;900&display=swap");
+:root {
+  --main-bg-color: #E0E8FF;
+  --card-bg-color: #FFF;
+  --plan-bg-color: #f5f7ff;
+  --title-color: #1f2f56;
+  --accent-color: #3829e0;
+  --copy-color: #7280a7;
+  --shadow: #b3b3b3; }
+
+html {
+  font-size: 16px;
+  font-family: "Red Hat Display", sans-serif; }
+
+body {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  background-color: var(--main-bg-color);
+  background-image: url("../assets/images/pattern-background-mobile.svg");
+  background-repeat: no-repeat;
+  background-size: 100%; }
+  @media (min-width: 768px) {
+    body {
+      background-image: url("../assets/images/pattern-background-desktop.svg");
+      background-size: 100% 40%; } }
+
+.main {
+  padding: 0 1.5rem; }
+
+.card {
+  max-width: 400px;
+  min-width: 300px;
+  margin: 0 auto;
+  border-radius: 1rem;
+  background-color: var(--card-bg-color);
+  padding-bottom: 1rem;
+  box-shadow: 0 0 1rem var(--shadow);
+  margin-top: 1rem; }
+  .card__body, .card__footer {
+    padding-left: 1.5rem;
+    padding-right: 1.5rem; }
+    @media (min-width: 768px) {
+      .card__body, .card__footer {
+        padding-left: 2.5rem;
+        padding-right: 2.5rem; } }
+  .card__figure {
+    margin: 0;
+    border-top-left-radius: 1rem;
+    border-top-right-radius: 1rem;
+    overflow: hidden; }
+  .card__image {
+    max-width: 100%; }
+  .card__title, .card__copy, .card__button {
+    text-align: center; }
+  .card__title, .card__label {
+    color: var(--title-color);
+    font-weight: 700; }
+  .card__copy, .card__price {
+    color: var(--copy-color); }
+  .card__title {
+    margin-top: 2rem; }
+  .card__copy {
+    line-height: 1.5rem;
+    padding: 0 0.5rem; }
+  .card__plan {
+    font-size: 0.9rem;
+    display: grid;
+    grid-template-columns: auto 1fr auto;
+    grid-template-rows: repeat(2, 1fr);
+    grid-template-areas: "icon label action" "icon price action";
+    align-items: center;
+    column-gap: 1rem;
+    padding: 1rem;
+    background-color: var(--plan-bg-color);
+    border-radius: 0.8rem;
+    margin-top: 1.5rem; }
+  .card__icon {
+    grid-area: icon; }
+  .card__label {
+    grid-area: label; }
+  .card__price {
+    grid-area: price; }
+  .card__link {
+    grid-area: action;
+    color: var(--title-color);
+    font-weight: 700; }
+  .card__actions {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around; }
+  .card__button {
+    height: 3.2rem;
+    border-radius: 0.8rem;
+    display: grid;
+    place-items: center;
+    font-weight: 700;
+    border: none;
+    cursor: pointer; }
+    .card__button--payment {
+      text-decoration: none;
+      background-color: var(--accent-color);
+      color: var(--card-bg-color);
+      margin: 1.5rem 0 0.5rem;
+      box-shadow: 0 0.5rem 1.5rem var(--shadow); }
+    .card__button--cancel {
+      color: var(--copy-color);
+      background-color: transparent; }
+
+.attribution {
+  font-size: 0.9rem;
+  text-align: center;
+  padding: 1rem;
+  color: var(--copy-color);
+  user-select: none; }
+  .attribution__link {
+    color: var(--title-color);
+    text-decoration: none;
+    transition: color 0.2s; }
+    .attribution__link:hover {
+      color: var(--accent-color); }
+
+.card__link, .card__button--payment {
+  transition: filter 0.2s; }
+  .card__link:hover, .card__button--payment:hover {
+    filter: brightness(1.5);
+    text-decoration: none; }
+
+.card__button--cancel {
+  transition: color 0.2s; }
+  .card__button--cancel:hover {
+    color: var(--title-color); }
