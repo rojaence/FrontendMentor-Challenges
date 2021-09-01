@@ -1,0 +1,19 @@
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@500;700&display=swap');
+
+$very-dark-grayish-blue: hsl(217, 19%, 35%);
+$desaturated-dark-blue: hsl(214, 17%, 51%);
+$grayish-blue: hsl(212, 23%, 69%);
+$light-grayish-blue: hsl(210, 46%, 95%);
+$white: hsl(0, 0%, 100%);
+$very-light-grayish-blue: hsl(222, 45%, 94%);
+$hover-color: #6d7d95;
+:root {
+    --main-bg-color: #{$light-grayish-blue};
+    --card-bg-color: #{$white};
+    --share-bg-color: #{$very-dark-grayish-blue};
+    --copy-color: #{$desaturated-dark-blue};
+    --title-color: #{$very-dark-grayish-blue};
+    --button-bg-color: #{$light-grayish-blue};
+    --hover-bg-color: #{$hover-color};
+    --label-color: #{$grayish-blue};
+}
