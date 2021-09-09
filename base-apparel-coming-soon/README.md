@@ -28,10 +28,10 @@ Users should be able to:
 ### Screenshot
 
 Mobile
-![](/assets/screenshots/mobile-screenshot.png)
+![](./assets/screenshots/mobile-screenshot.png)
 
 Desktop
-![](/assets/screenshots/desktop-screenshot.png)
+![](./assets/screenshots/desktop-screenshot.png)
 
 
 ### Links
