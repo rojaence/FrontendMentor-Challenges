@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/images/favicon-32x32.png">
+  <link rel="stylesheet" href="css/styles.css">
+  <title>Frontend Mentor | Base Apparel coming soon page</title>
+</head>
+<body>
+  <header class="header">
+    <img src="assets/images/logo.svg" alt="logo" class="logo">
+  </header>
+  <picture class="picture">
+    <source media="(min-width: 1025px)" srcset="assets/images/hero-desktop.jpg">
+    <img src="assets/images/hero-mobile.jpg" alt="hero picture" class="picture__image">
+  </picture>
+  <main class="main">
+    <form action="#" class="form" id="form">
+      <h1 class="form__title"><span class="form__title--light">We're </span>coming soon</h1>
+      <p class="form__copy">
+        Hello fellow shoppers! We're currently building our new fashion store. 
+        Add your email below to stay up-to-date with announcements and our launch deals.
+      </p>
+      <div class="form__action">
+        <input type="text" name="email" id="form-email" class="form__input form__input--email" placeholder="Email Address">
+        <input type="submit" class="form__input form__input--submit" value="" id="submit-button" aria-label="submit email">
+        <span class="form__label form__label--error">Please provide a valid email</span>
+      </div>
+    </form>
+  </main>
+  <footer class="footer">
+    <div class="attribution">
+      <p class="attribution__copy">
+        Challenge by <a href="https://www.frontendmentor.io?ref=challenge" class="attribution__link" target="_blank">Frontend Mentor</a>. 
+      </p>
+      <p class="attribution__copy">
+        Coded by <a href="https://github.com/rojaence" class="attribution__link" target="_blank">Ronny Endara</a>.
+      </p>
+    </div>
+  </footer>
+  <script src="js/script.js"></script>
+</body>
+</html>
