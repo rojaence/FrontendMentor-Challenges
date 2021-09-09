@@ -6,7 +6,7 @@ This is a solution to the [Base Apparel coming soon page challenge on Frontend M
 
 - [Overview](#overview)
   - [The challenge](#the-challenge)
-  - [Screenshot](#screenshot)
+  - [Screenshots](#screenshots)
   - [Links](#links)
 - [My process](#my-process)
   - [Built with](#built-with)
@@ -25,12 +25,10 @@ Users should be able to:
   - The `input` field is empty
   - The email address is not formatted correctly
 
-### Screenshot
+### Screenshots
 
-Mobile
 ![](./assets/screenshots/mobile-screenshot.png)
 
-Desktop
 ![](./assets/screenshots/desktop-screenshot.png)
 
 
