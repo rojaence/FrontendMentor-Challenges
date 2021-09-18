@@ -1,0 +1,57 @@
+Fecha : 5 de Septiembre de 2021
+
+1. Fallo en drag and drop:
+    Al intentar cambiar un elemento a la penúltima posición 
+    se inserta en la última. -> corregido
+
+Estado -> fallo corregido, integración pendiente
+Integración -> Actualización de prioridad de tareas aún no programada 
+:: completado - semana del 17 de Septiembre de 2021
+
+Corrección : 06 de Septiembre de 2021
+
+La solución era quitar la evaluación del primer if en el evento 
+de escucha 'drop' de stackList, la primera condición tenía un or
+para evaluar el id del nodo de referencia o si era el útlimo, se 
+deja sola la evaluación del id porque la otra es irrelevante.
+
+En cuanto al quitar las clases 'todo--grow' se elimina el bucle
+for y se le quita únicamente la clase al nodo de referencia, 
+de esta forma el efecto de movimiento entre elementos de la 
+lista de tareas funciona de una forma más óptima.
+
+
+--------------------------------------------------------------
+
+
+
+2. Fallo al actualizar la lista de tareas:
+    Sucede al eliminar todas las tareas completadas estando en la categoría de completadas con el botón de clear-selected
+    La lista debería mostrarse vacía pero en lugar de ello aparecen las tareas activas.
+
+Estado -> correjido, integración pendiente
+Integración -> Eliminación de los registros correspondientes a las tareas completadas aún no programada
+:: completado la semana del 17 de Septiembre de 2021
+
+
+
+-------------------------------------------------------------
+
+3. Posible inconsistencia (no catalogado como fallo)
+
+Al eliminar todas las tareas completadas los números de prioridad dejan espacios vacíos, ejemplo: 1, 4, 6, 8.
+El funcionamiento no se ve afectado, los números no 
+mantienen una secuencia solo el orden de menor a mayor.
+
+
+-------------------------------------------------------------
+
+4. Diferencias en los resultados de error entre los motores de Edge y Firefox
+
+En la función addNewTodo al intentar el if para comprobar que el mensaje es que la clave de tarea
+ya existe y mostrar la ventana modal correspondiente, en Firefox muestra otro mensaje (coincide con el
+error pero el mensaje es distinto, trata sobre una constraint que no se cumple)
+
+
+
+insertBefore linea 140 -> los casos if | else ya no son necesarios

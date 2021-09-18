@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="assets/images/favicon.png"
+    />
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/styles.css">
+    <title>Frontend Mentor | Todo app</title>
+  </head>
+  <body class="theme">
+    <div class="modal" id="modal-window" data-modal="window">
+      <div class="modal__content" data-modal="content">
+        <img alt="alert icon" src="assets/images/alert.svg" class="modal__icon" data-modal="content" id="modal-icon">
+        <p class="modal__message" id="modal-message" data-modal="content"></p>
+        <div class="modal__actions">
+          <button class="modal__button modal__button--confirm" data-action="confirm" id="modal-button-confirm">Ok</button>
+          <button class="modal__button modal__button--cancel" data-action="cancel" id="modal-button-cancel">Cancel</button>
+        </div>
+      </div>
+    </div>
+    <main class="main">
+      <article class="component">
+        <div class="component__header">
+          <h2 class="component__title">TODO</h2>
+          <button class="component__button-theme" id="button-theme" aria-label="theme"></button>
+          <div class="component__new">
+            <button class="component__button-new" id="button-new" aria-label="add"></button>
+            <input
+              type="text"
+              id="input-todo"
+              class="component__input"
+              placeholder="Create a new todo..."
+            />
+          </div>
+        </div>
+        <div class="component__stack" id="stack-todo">
+          <div class="component__list" id="stack-list"></div>
+          <div class="component__control" id="stack-control">
+            <p class="component__items">
+              <span class="component__items--number" id="items-left">0</span>items
+              left
+            </p>
+            <p class="component__clear" id="clear-completed" data-type="clear">Clear completed</p>
+          </div>
+        </div>
+        <div class="component__select" id="select-category">
+          <span id="category-all" class="component__category component__category--active" data-category="all">All</span>
+          <span id="category-active" class="component__category" data-category="active">Active</span>
+          <span id="category-completed" class="component__category" data-category="completed">Completed</span>
+        </div>
+        <p class="component__label">Drag and drop to reorder list</p>
+      </article>
+    </main>
+    <footer class="attribution">
+      Challenge by
+      <a class="attribution__link" href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+        >Frontend Mentor</a
+      >. <br class="line-break"/>Coded by
+      <a class="attribution__link" href="https://www.github.com/rojaence" target="_blank">Ronny Endara</a
+      >.
+    </footer>
+    <script src="js/scripts.js"></script>
+    <p></p>
+  </body>
+</html>

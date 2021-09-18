@@ -1,0 +1,76 @@
+// Primary
+
+$accent-color: #3a7bfd;
+$green: #59948b86;
+$red: #e2564c85;
+$green-hover: #59948b;
+$red-hover:  #E2574C;
+$modal-button-color: hsl(235, 19%, 35%);
+$accent-gradient-color: linear-gradient(
+  to bottom right,
+  hsl(192, 100%, 67%),
+  hsl(280, 87%, 65%)
+);
+
+// Light theme
+
+$lt-color-1: hsl(0, 0%, 98%);
+$lt-color-2: hsl(235, 32%, 92%);
+$lt-color-3: hsl(233, 11%, 84%);
+$lt-color-4: hsl(236, 9%, 61%);
+$lt-color-5: hsl(235, 19%, 35%);
+
+// Dark theme
+$dt-color-1: hsl(235, 21%, 11%);
+$dt-color-2: hsl(235, 24%, 19%);
+$dt-color-3: hsl(234, 39%, 85%);
+$dt-color-4: hsl(236, 33%, 92%);
+$dt-color-5: hsl(234, 11%, 52%);
+$dt-color-6: hsl(233, 14%, 35%);
+$dt-color-7: hsl(237, 14%, 26%);
+
+// Background images
+$lt-bg-desktop: url("../assets/images/bg-desktop-light.jpg");
+$lt-bg-mobile: url("../assets/images/bg-mobile-light.jpg");
+$dt-bg-desktop: url("../assets/images/bg-desktop-dark.jpg");
+$dt-bg-mobile: url("../assets/images/bg-mobile-dark.jpg");
+
+.theme {
+  --main-bg-color: #{$lt-color-1};
+  --stack-bg-color: #{$lt-color-1};
+  --border-color: #{$lt-color-2};
+  --box-shadow-color: #{$lt-color-3};
+  --hover-box-shadow-color: #{$lt-color-3};
+  --primary-text-color: #{$lt-color-5};
+  --secondary-text-color: #{$lt-color-4};
+  --todo-checked-color: #{$dt-color-3};
+  --text-hover-color: #{$dt-color-1};
+  --button-check-bg-color: #{$lt-color-1};
+  --scroll-thumb-color: #{$lt-color-3};
+  --main-bg-image: #{$lt-bg-mobile};
+  --modal-bg-color: #{$lt-color-1};
+  --modal-button-color: #{$lt-color-5};
+  --modal-box-shadow-color: #{$lt-color-5};
+  @media screen and (min-width: 768px) {
+    --main-bg-image: #{$lt-bg-desktop};
+  }
+  &--dark {
+    --main-bg-color: #{$dt-color-1};
+    --stack-bg-color: #{$dt-color-2};
+    --border-color: #{$dt-color-7};
+    --box-shadow-color: #{$dt-color-1};
+    --hover-box-shadow-color: #{$dt-color-1};
+    --primary-text-color: #{$dt-color-3};
+    --todo-checked-color: #{$dt-color-6};
+    --button-check-bg-color: #{$dt-color-2};
+    --text-hover-color: #{$lt-color-1};
+    --scroll-thumb-color: #{$dt-color-6};
+    --main-bg-image: #{$dt-bg-mobile};
+    --modal-bg-color: #{$dt-color-7};
+    --modal-button-color: #{$dt-color-3};
+    --modal-box-shadow-color: #{$dt-color-1};
+    @media screen and (min-width: 768px) {
+      --main-bg-image: #{$dt-bg-desktop};
+    }
+  }
+}
