@@ -465,13 +465,13 @@ const showModalWindow = (message, type) => {
   modalConfirmButton.focus();
   switch (type) {
     case "alert":
-      modalIcon.setAttribute("src", "../assets/images/alert.svg");
+      modalIcon.setAttribute("src", "./assets/images/alert.svg");
       modalConfirmButton.setAttribute("data-action", "confirm");
       modalConfirmButton.style.display = "block";
       modalCancelButton.style.display = "none";
       break;
     case "question":
-      modalIcon.setAttribute("src", "../assets/images/question.svg");
+      modalIcon.setAttribute("src", "./assets/images/question.svg");
       modalConfirmButton.setAttribute("data-action", "clear-completed");
       modalConfirmButton.style.display = "block";
       modalCancelButton.style.display = "block";
