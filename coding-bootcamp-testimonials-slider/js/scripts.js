@@ -8,14 +8,14 @@ var cont = 0;
 const testimonialData = [
   {
     name: "Tanya Sinclair",
-    picture: "./assets/images/image-tanya.jpg",
+    picture: "/assets/images/image-tanya.jpg",
     profession: "UX Engineer",
     comment:
       "I’ve been interested in coding for a while but never taken the jump, until now. I couldn’t recommend this course enough. I’m now in the job of my dreams and so excited about the future",
   },
   {
     name: "John Tarkpor",
-    picture: "./assets/images/image-john.jpg",
+    picture: "/assets/images/image-john.jpg",
     profession: "Junior Front-end Developer",
     comment:
       "If you want to lay the best foundation possible I’d recommend taking this course. The depth the instructors go into is incredible. I now feel so confident about starting up as a professional developer",
