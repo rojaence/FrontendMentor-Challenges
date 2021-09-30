@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/images/favicon-32x32.png">
+  <link rel="stylesheet" href="css/normalize.min.css">
+  <link rel="stylesheet" href="css/styles.css">
+  <title>Frontend Mentor | Coding Bootcamp Testimonials Slider</title>
+</head>
+<body>
+  <main class="main">
+    <div class="testimonials" id="testimonials">
+      <div class="slider-container" id="testimonials-container"></div>
+      <div class="slider-control" id="slider-control">
+        <button class="slider-control__button slider-control__button--previous" id="slider-previous"></button>
+        <button class="slider-control__button slider-control__button--next" id="slider-next"></button>
+      </div>
+    </div>
+  </main>
+  <footer class="footer">
+    <p class="attribution">
+      Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank" class="attribution__link">Frontend Mentor</a>. <br class="line-break">
+      Coded by <a href="https://www.github.com/rojaence" target="_blank" class="attribution__link">Ronny Endara</a>.
+    </p>
+  </footer>
+  <template id="card-template">
+    <article class="card">
+      <header class="card__header">
+        <figure class="card__figure">
+          <img src="" alt="picture" class="card__image">
+        </figure>
+      </header>
+      <div class="card__body">
+        <p class="card__copy"></p>
+      </div>
+      <footer class="card__footer">
+        <h2 class="card__name"></h2>
+        <span class="card__profession"></span>
+      </footer>
+    </article>
+  </template>
+  <script src="js/scripts.js"></script>
+</body>
+</html>
