@@ -1,0 +1,11 @@
+@font-face {
+  font-family: "Lustria";
+  src: url("../assets/fonts/Lustria-Regular.ttf");
+}
+@font-face {
+  font-family: "BarlowCondensed";
+  src: url("../assets/fonts/BarlowCondensed-Regular.ttf");
+}
+body {
+  background-image: url("../assets/home/background-home-mobile.jpg");
+}/*# sourceMappingURL=home.css.map */

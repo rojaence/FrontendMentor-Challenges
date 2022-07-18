@@ -1,0 +1,21 @@
+@import '_variables';
+
+body { 
+  background-image: $tech-bg-mobile;
+  
+  @media screen and(min-width: 768px) {
+    background-image: $tech-bg-tablet;
+  }
+  
+  @media screen and(min-width: 1026px) {
+    background-image: $tech-bg-desktop;
+  }
+}
+
+.main {
+  padding-left: 0;
+  padding-right: 0;
+  @media screen and (min-width: 1025px) {
+    min-width: 1000px;
+  }
+}

@@ -1,0 +1,31 @@
+include ../config/config
+
+doctype html
+html(lang="en")
+  head
+    meta(charset="UTF-8")
+    meta(http-equiv="X-UA-Compatible", content="IE=edge")
+    meta(name="viewport", content="width=device-width, initial-scale=1.0")
+    link(rel="shortcut icon", href="assets/favicon.png", type="image/x-icon")
+    link(rel="stylesheet", href="css/normalize.css")
+    link(rel="stylesheet", href="css/template.css")
+    block head
+  body 
+    header.header
+      img.logo(src='assets/shared/logo.svg')
+      button.menu-button#menu-button
+      div.main-nav-container#main-nav
+        nav.main-nav.main-nav-content#main-nav-content
+          ul.main-nav__list
+            each route in routes
+              li.main-nav__item: a(href=`${route.url}`, class=(routeName === route.name ? "main-nav__link main-nav__link--active" : "main-nav__link"))
+                span.main-nav__link--number=`${route.id}`
+                =`${route.name}`
+      block header
+    main.main
+      block main 
+    script(src="js/template.js") 
+    footer.footer
+      p.attribution Coded by 
+        a.attribution__link(href="#") Ronny Endara
+      block footer

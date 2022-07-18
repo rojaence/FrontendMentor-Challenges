@@ -1,0 +1,16 @@
+extends ../templates/template
+include ../mixins/slider
+include ../mixins/title
+
+block head
+  link(rel="stylesheet", href="css/technology.css")
+  -const routeName = 'Technology'
+  title Technology
+
+block header 
+
+block main 
+  +title('technology')
+  +slider('technology')
+
+block footer

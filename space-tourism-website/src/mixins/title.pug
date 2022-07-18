@@ -1,0 +1,6 @@
+
+mixin title(route)
+  - const titles = { 'destinations': { 'number': '01', 'text': 'PICK YOUR DESTINATION' }, 'crew': { 'number': '02', 'text': 'MEET YOUR CREW' }, 'technology': { 'number': '03', 'text': 'SPACE LAUNCH 101' } }
+  h1.title
+    span.title--number=titles[route].number
+    span.title--text=titles[route].text

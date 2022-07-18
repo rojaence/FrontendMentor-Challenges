@@ -1,0 +1,16 @@
+extends ../templates/template
+include ../mixins/slider
+include ../mixins/title
+
+block head
+  link(rel="stylesheet", href="css/crew.css")
+  -const routeName = 'Crew'
+  title Crew
+
+block header 
+
+block main 
+  +title('crew')
+  +slider('crew')
+
+block footer

@@ -1,0 +1,48 @@
+mixin slider(route)
+  -
+    let fs = require('fs');
+    let data = fs.readFileSync('./src/config/data.json');
+  -const jsonData = JSON.parse(data)
+  -const routeKeys = Object.keys(jsonData)
+  section(class=`slider slider--${route}`)#slider
+    .slider__header
+      each item, index in jsonData[route]
+        picture(data-id=index, class=`slider__picture ${index === 0 ? 'slider__picture--active' : ''}`)
+          if (route === 'technology')
+              source(media="(max-width: 600px)" srcset=`${item.images.landscape}`)
+              source(media="(min-width: 1025px)" srcset=`${item.images.portrait}`)
+              img.slider__image(src=`${item.images.landscape}`)
+          else
+              img.slider__image(src=item.images.webp, alt=item.name)
+    div(class=`slider-switch slider-switch--${route}`)#slider-switch
+      .slider-switch__button-group
+        each item, index in jsonData[route]
+          div('data-id'=index, class=`slider-switch__button ${index === 0 ? 'slider-switch__button--active' : ''}`)=`${route === 'destinations' ? item.name : route === 'technology' ? index + 1 : ''}`
+
+    .slider__content
+      each item, index in jsonData[route]
+        article('data-id'=index, class=`card card--${route} ${index === 0 ? 'card--active' : ''}`)
+          if (route === 'destinations')
+              header.card__header
+                h2.card__title=item.name
+              .card__body: p.card__copy=item.description 
+              footer.card__footer
+                .card__data
+                  span.card__data--label Avg. Distance
+                  span.card__data--value=item.distance
+                .card__data
+                  span.card__data--label Est. Travel Time
+                  span.card__data--value=item.travel
+          else if (route === 'crew')
+              header.card__header
+                h2.card__title=item.name
+                span.card__subtitle=item.role
+              .card__body: p.card__copy=item.bio
+              
+          else if (route === 'technology')
+              header.card__header
+                h2.card__title=item.name
+                span.card__subtitle The terminology...
+              .card__body: p.card__copy=item.description
+              
+    

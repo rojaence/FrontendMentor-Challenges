@@ -1,0 +1,19 @@
+@import '_variables';
+
+body { 
+  background-image: $crew-bg-mobile;
+  
+  @media screen and(min-width: 768px) {
+    background-image: $crew-bg-tablet;
+  }
+  
+  @media screen and(min-width: 1026px) {
+    background-image: $crew-bg-desktop;
+  }
+}
+
+.main {
+  @media screen and (min-width: 1025px) {
+    padding-bottom: 0;
+  }
+}

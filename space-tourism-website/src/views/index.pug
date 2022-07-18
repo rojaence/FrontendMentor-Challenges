@@ -1,0 +1,16 @@
+extends ../templates/template
+
+block head
+  -const routeName = 'Home'
+  link(rel="stylesheet", href="css/home.css")
+  title Home
+block header
+block main
+  section.introduction
+    h1.introduction__title So, you want to travel to 
+      span.introduction__title--accent SPACE
+    p.introduction__copy Let’s face it; if you want to go to space, you might as well genuinely go to
+      | outer space and not hover kind of on the edge of it. Well sit back, and relax
+      | because we’ll give you a truly out of this world experience!
+  .explore: .explore-button EXPLORE
+block footer
