@@ -1,0 +1,104 @@
+@import url('https://fonts.googleapis.com/css2?family=Spartan:wght@300;500;700&display=swap');
+
+:root {
+  font-size: 16px;
+  font-family: "Spartan", sans-serif;
+}
+
+$main-bg-color-1: hsl(222, 26%, 31%);
+$keypad-bg-color-1: hsl(223, 31%, 20%);
+$display-bg-color-1: hsl(224, 36%, 15%);
+$second-key-bg-color-1: hsl(225, 21%, 49%);
+$second-key-sd-color-1: hsl(224, 28%, 35%);
+$third-key-bg-color-1: hsl(6, 63%, 50%);
+$third-key-sd-color-1: hsl(6, 70%, 34%);
+$first-key-bg-color-1: hsl(30, 25%, 89%);
+$first-key-sd-color-1: hsl(28, 16%, 65%);
+$first-lbl-txt-color-1: hsl(0, 0, 100%);
+$second-lbl-txt-color-1: hsl(0, 0, 100%);
+$first-key-txt-color-1: hsl(221, 14%, 31%);
+$second-key-txt-color-1: hsl(0, 0, 100%);
+$third-key-txt-color-1: hsl(0, 0, 100%);
+
+$main-bg-color-2: hsl(0, 0%, 90%);
+$keypad-bg-color-2: hsl(0, 5%, 81%);
+$display-bg-color-2: hsl(0, 0%, 93%);
+$second-key-bg-color-2: hsl(185, 42%, 37%);
+$second-key-sd-color-2: hsl(185, 58%, 25%);
+$third-key-bg-color-2: hsl(25, 98%, 40%);
+$third-key-sd-color-2: hsl(25, 99%, 27%);
+$first-key-bg-color-2: hsl(45, 7%, 89%);
+$first-key-sd-color-2: hsl(35, 11%, 61%);
+$first-lbl-txt-color-2: hsl(60, 10%, 19%);
+$second-lbl-txt-color-2: hsl(221, 14%, 31%);
+$first-key-txt-color-2: hsl(221, 14%, 31%);
+$second-key-txt-color-2: hsl(0, 0, 100%);
+$third-key-txt-color-2: hsl(0, 0, 100%);
+
+$main-bg-color-3: hsl(268, 75%, 9%);
+$keypad-bg-color-3: hsl(268, 71%, 12%);
+$display-bg-color-3: hsl(268, 71%, 12%);
+$second-key-bg-color-3: hsl(281, 89%, 26%);
+$second-key-sd-color-3: hsl(285, 91%, 52%);
+$third-key-bg-color-3: hsl(176, 100%, 44%);
+$third-key-sd-color-3: hsl(177, 92%, 70%);
+$first-key-bg-color-3: hsl(268, 47%, 21%);
+$first-key-sd-color-3: hsl(290, 70%, 36%);
+$first-lbl-txt-color-3: hsl(52, 100%, 62%);
+$second-lbl-txt-color-3: hsl(52, 100%, 62%);
+$first-key-txt-color-3: hsl(52, 100%, 62%);
+$second-key-txt-color-3: hsl(0, 0, 100%);
+$third-key-txt-color-3: hsl(268, 75%, 9%);
+
+
+
+.theme {
+  &--one {
+    --main-bg-color: #{$main-bg-color-1};
+    --keypad-bg-color: #{$keypad-bg-color-1};
+    --display-bg-color: #{$display-bg-color-1};
+    --second-key-bg-color: #{$second-key-bg-color-1};
+    --second-key-sd-color: #{$second-key-sd-color-1};
+    --third-key-bg-color: #{$third-key-bg-color-1};
+    --third-key-sd-color: #{$third-key-sd-color-1};
+    --first-key-bg-color: #{$first-key-bg-color-1};
+    --first-key-sd-color: #{$first-key-sd-color-1};
+    --first-lbl-txt-color: #{$first-lbl-txt-color-1};
+    --second-lbl-txt-color: #{$second-lbl-txt-color-1};
+    --first-key-txt-color: #{$first-key-txt-color-1};
+    --second-key-txt-color: #{$second-key-txt-color-1};
+    --third-key-txt-color: #{$third-key-txt-color-1};
+  }
+  &--two {
+    --main-bg-color: #{$main-bg-color-2};
+    --keypad-bg-color: #{$keypad-bg-color-2};
+    --display-bg-color: #{$display-bg-color-2};
+    --second-key-bg-color: #{$second-key-bg-color-2};
+    --second-key-sd-color: #{$second-key-sd-color-2};
+    --third-key-bg-color: #{$third-key-bg-color-2};
+    --third-key-sd-color: #{$third-key-sd-color-2};
+    --first-key-bg-color: #{$first-key-bg-color-2};
+    --first-key-sd-color: #{$first-key-sd-color-2};
+    --first-lbl-txt-color: #{$first-lbl-txt-color-2};
+    --second-lbl-txt-color: #{$second-lbl-txt-color-2};
+    --first-key-txt-color: #{$first-key-txt-color-2};
+    --second-key-txt-color: #{$second-key-txt-color-2};
+    --third-key-txt-color: #{$third-key-txt-color-2};
+  }
+  &--three {
+    --main-bg-color: #{$main-bg-color-3};
+    --keypad-bg-color: #{$keypad-bg-color-3};
+    --display-bg-color: #{$display-bg-color-3};
+    --second-key-bg-color: #{$second-key-bg-color-3};
+    --second-key-sd-color: #{$second-key-sd-color-3};
+    --third-key-bg-color: #{$third-key-bg-color-3};
+    --third-key-sd-color: #{$third-key-sd-color-3};
+    --first-key-bg-color: #{$first-key-bg-color-3};
+    --first-key-sd-color: #{$first-key-sd-color-3};
+    --first-lbl-txt-color: #{$first-lbl-txt-color-3};
+    --second-lbl-txt-color: #{$second-lbl-txt-color-3};
+    --first-key-txt-color: #{$first-key-txt-color-3};
+    --second-key-txt-color: #{$second-key-txt-color-3};
+    --third-key-txt-color: #{$third-key-txt-color-3};
+  }
+}

@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/images/favicon-32x32.png">
+  <link rel="stylesheet" href="css/normalize.css">
+  <link rel="stylesheet" href="css/styles.css">
+  <title>Frontend Mentor | Calculator app</title>
+</head>
+
+<body class="theme--one">
+  <main class="main">
+    <article class="calculator">
+      <header class="calculator__header">
+        <h2 class="calculator__title">calc</h2>
+        <div class="theme-selector">
+          <span class="theme-selector__label theme-selector__label--title">THEME</span>
+          <div class="theme-selector__items" id="theme-selector">
+            <div class="theme-selector__field">
+              <span class="theme-selector__label theme-selector__label--number theme-selector__label--one">1</span>
+              <div class="theme-selector__button theme-selector__button--one" data-value="theme-1" data-role="button" id="button-theme-1"></div>
+            </div>
+            <div class="theme-selector__field">
+              <span class="theme-selector__label theme-selector__label--number theme-selector__label--two">2</span>
+              <div class="theme-selector__button theme-selector__button--two" data-value="theme-2" data-role="button" id="button-theme-2"></div>
+            </div>
+            <div class="theme-selector__field">
+              <span class="theme-selector__label theme-selector__label--number theme-selector__label--three">3</span>
+              <div class="theme-selector__button theme-selector__button--three" data-value="theme-3" data-role="button" id="button-theme-3"></div>
+            </div>
+          </div>
+        </div>
+      </header>
+      <div class="calculator__body">
+        <div class="calculator__display">
+          <p class="calculator__result" id="result">0</p>
+        </div>
+        <div class="calculator__keypad" id="keypad">
+          <button class="calculator__key calculator__key--zer" data-type="number" data-value="0">0</button>
+          <button class="calculator__key calculator__key--one" data-type="number" data-value="1">1</button>
+          <button class="calculator__key calculator__key--two" data-type="number" data-value="2">2</button>
+          <button class="calculator__key calculator__key--three" data-type="number" data-value="3">3</button>
+          <button class="calculator__key calculator__key--four" data-type="number" data-value="4">4</button>
+          <button class="calculator__key calculator__key--five" data-type="number" data-value="5">5</button>
+          <button class="calculator__key calculator__key--six" data-type="number" data-value="6">6</button>
+          <button class="calculator__key calculator__key--seven" data-type="number" data-value="7">7</button>
+          <button class="calculator__key calculator__key--eight" data-type="number" data-value="8">8</button>
+          <button class="calculator__key calculator__key--nine" data-type="number" data-value="9">9</button>
+          <button class="calculator__key calculator__key--sum" data-type="operator" data-value="sum">+</button>
+          <button class="calculator__key calculator__key-subs" data-type="operator" data-value="subst">-</button>
+          <button class="calculator__key calculator__key--mult" data-type="operator" data-value="mult">×</button>
+          <button class="calculator__key calculator__key--div" data-type="operator" data-value="divi">/</button>
+          <button class="calculator__key calculator__key--dec" data-type="number" data-value=".">.</button>
+          <button class="calculator__key calculator__key--del" data-type="operator" data-value="del">DEL</button>
+          <button class="calculator__key calculator__key--reset" data-type="operator" data-value="reset">RESET</button>
+          <button class="calculator__key calculator__key--equal" data-type="operator" data-value="equal">=</button>
+        </div>
+      </div>
+    </article>
+  </main>
+  <footer class="footer">
+    <p class="attribution">
+      Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank" class="attribution__link">Frontend Mentor</a>.<br class="line-break">
+      Coded by <a href="https://github.com/rojaence" target="_blank" class="attribution__link">Ronny Endara</a>.
+    </p>
+  </footer>
+  <script src="js/scripts.js"></script>
+</body>
+</html>
